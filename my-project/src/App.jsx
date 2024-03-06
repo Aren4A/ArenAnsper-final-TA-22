@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
@@ -8,15 +6,14 @@ function App() {
 
   return (
     <>
-        <header className='' >
+        <header className='w-full' >
           <div className='flex flex-row'>
             <p>Visioon</p>
             <p>Hind</p>
             <p>Kontakt</p>
           </div>
         </header>
-        <body>
-          
+        <body className='w-full'>
         </body>
         <footer></footer>
     </>
