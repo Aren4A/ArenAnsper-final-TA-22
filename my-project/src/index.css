@@ -17,4 +17,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-  
+body {
+  color: #E3C10C;
+  margin: 0;
+  display: flex;
+  place-items: center;
+  width: 100vw; /* full viewport width */
+  height: 100vh; /* full viewport height */
+}
+
+div {
+  width: 100%; /* full width of parent */
+  height: 100%; /* full height of parent */
+}
+
