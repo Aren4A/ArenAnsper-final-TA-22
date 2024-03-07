@@ -5,16 +5,11 @@ function About() {
   return (
     <section id="about">
       <div
-<<<<<<< Updated upstream
-  class="flex flex-col px-20 py-12 text-3xl text-justify text-[#012579] bg-[#E3C10C]">
-  <div class="flex gap-5 justify-between mt-9">
-=======
   class="flex flex-col px-20 py-12 text-3xl text-justify text-[#012579] bg-[#E3C10C]"
 >
   <div
     class="flex gap-5 justify-between mt-9"
   >
->>>>>>> Stashed changes
     <div class="flex-auto self-end mt-10 italic">
       Kamur Finance OÜ pooldab paberivaba raamatupidamist - eelkõige
       teeb see aruandluse kajastamise mugavamaks, kiiremaks ja
@@ -25,7 +20,7 @@ function About() {
     </div>
     <img src="/src/assets/syda1.png"
       class="self-start aspect-[1.03] w-[73px]"
-    />
+    />  
   </div>
   <img src="/src/assets/syda2.png"
     class="mt-8 self-start aspect-[1.03] w-[73px] "
