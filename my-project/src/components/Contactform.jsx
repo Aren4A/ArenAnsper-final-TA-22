@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 function Contactform() {
     const [total, setTotal] = useState(0);
+    const [selectedServices, setSelectedServices] = useState({});
     const services = [
         { label: 'Palgaarvestus 1 töötaja', price: 10 },
         { label: 'Palgaarvestus 2-10 töötajat', price: 20 },
@@ -18,28 +19,36 @@ function Contactform() {
         { label: 'Üksikute kannetega abistamine (sōiduauto kompensatsioon, osakapitali sissemaksmine jne)', price: 20 },
     ];
 
-    const handleCheck = (isChecked, price) => {
-        setTotal(isChecked ? total + price : total - price);
-    };
+    const handleCheck = (isChecked, service) => {
+        setTotal(isChecked ? total + service.price : total - service.price);
+        setSelectedServices(prevServices => ({
+          ...prevServices,
+          [service.label]: isChecked ? service.price : 0
+        }));
+      };
 
-    return (
-        <section id="services">
+      return (
+        <section id="hind">
           <form action="https://formsubmit.co/ametikoolitest@gmail.com" method="POST">
+            <input type="hidden" name="total" value={total} />
+            {Object.entries(selectedServices).map(([service, price], index) => (
+                <input key={index} type="hidden" name={`service-${index}`} value={`${service}: ${price}`} />
+            ))}
             <div class="flex flex-col items-start px-20 pt-8 pb-1.5 bg-stone-200">
               <div class="text-4xl text-blue-900 max-md:max-w-full">
                 Mul on ühes kalendrikuus:
               </div>
               {services.map((service, index) => (
-                <div class="flex gap-4 mt-4 text-2xl text-blue-900">
+                <div class="flex gap-4 mt-4 sm:text-4xl text-sm text-blue-900">
                   <div>
                     <div className="flex">
                       <label className="cursor-pointer label gap-4">
-                        <input 
-                          type="checkbox" 
-                          id={`checkbox-${index}`} 
-                          name={`service-${index}`} 
-                          onChange={(e) => handleCheck(e.target.checked, service.price)} 
-                          className="checkbox checkbox-warning" 
+                      <input 
+                        type="checkbox" 
+                        id={`checkbox-${index}`} 
+                        name={`service-${index}`} 
+                        onChange={(e) => handleCheck(e.target.checked, service)} 
+                        className="checkbox checkbox-warning" 
                         />
                         <span className="">{service.label}</span>
                       </label>
@@ -49,65 +58,65 @@ function Contactform() {
               ))}
               <div class="flex gap-5 justify-between mt-14 w-full max-w-[1107px]">
                 <div class="flex gap-1.5 my-auto text-2xl text-blue-900">
-                  <div class="flex align-middle">
-                    <input 
-                      id="hourly-accounting-checkbox" 
-                      name="hourly-accounting" 
-                      type="checkbox" 
-                      className="checkbox checkbox-warning mt-1.5"
-                      onChange={(e) => handleCheck(e.target.checked, 50)}
+                  <div class="flex align-middle sm:text-4xl text-sm">
+                  <input 
+                    id="hourly-accounting-checkbox" 
+                    name="hourly-accounting" 
+                    type="checkbox" 
+                    className="checkbox checkbox-warning mt-1.5"
+                    onChange={(e) => handleCheck(e.target.checked, { label: 'Hourly accounting', price: 50 })}
                     />
                     <label for="hourly-accounting-checkbox" class="ms-3 flex-auto">soovin tunnipõhist raamatupidamist</label>
                   </div>
                 </div>
                 <div class="flex gap-3.5">
                   <div class="grow justify-center px-8 py-4 text-4xl text-black bg-white border border-black border-solid max-md:px-5">{total}</div>
-                  <div class="grow my-auto text-4xl text-blue-900">€/kuus</div>
+                  <div class="grow my-auto sm:text-4xl text-sm  text-blue-900">€/kuus</div>
                 </div>
               </div>
               <div class=" flex justify-end mr-3 self-end mt-3.5 text-base text-blue-900">
                 *täpne hind kujuneb personaalse kokkuleppe alusel
               </div>
             </div>
-            <div class="text-black flex flex-row px-20 py-12">
+            <div class="text-black flex flex-row">
               <div class="flex flex-col">
                 <div class="flex flex-col mb-3">
-                  
                 </div>
-                <div class=" flex flex-row px-20 py-12">
-             <div class="flex flex-col">
-             <div class="flex flex-col mb-3">
-                <label class="form-label">Eesnimi</label>
-                <input name="first_name" type="text" className="input input-bordered w-full max-w-xs" required />
-             </div>
+                <div class="flex flex-col lg:px-20 px-4 py-12">
+                <div class="flex flex-col">
+                    <div class="flex flex-col mb-3">
+                    <label class="form-label">Eesnimi</label>
+                    <input name="first_name" type="text" className="input input-bordered w-full lg:max-w-xs" required />
+                    </div>
 
-             <div class="flex flex-col mb-3">
-               <label class="form-label">Perekonnanimi</label>
-               <input name="last_name" type="text" className="input input-bordered w-full max-w-xs" required />
-            </div>
+                    <div class="flex flex-col mb-3">
+                    <label class="form-label">Perekonnanimi</label>
+                    <input name="last_name" type="text" className="input input-bordered w-full lg:max-w-xs" required />
+                    </div>
 
-           <div class="flex flex-col mb-3">
-             <label class="form-label">Ettevõtte nimi</label>
-             <input name="company_name" type="text" className="input input-bordered w-full max-w-xs" required />
-           </div>
+                    <div class="flex flex-col mb-3">
+                    <label class="form-label">Ettevõtte nimi</label>
+                    <input name="company_name" type="text" className="input input-bordered w-full lg:max-w-xs" required />
+                    </div>
 
-           <div class="flex flex-col mb-3">
-             <label class="form-label">Email</label>
-            <input name="email" type="email" className="input input-bordered w-full max-w-xs" required />
-            </div>
+                    <div class="flex flex-col mb-3">
+                    <label class="form-label">Email</label>
+                    <input name="email" type="email" className="input input-bordered w-full lg:max-w-xs" required />
+                    </div>
 
-           <div class="flex flex-col mb-3">
-             <label class="form-label">Telefon</label>
-             <input name="phone" type="tel" className="input input-bordered w-full max-w-xs" required />
-           </div>
-            <div class="flex flex-col mb-3">              <label class="form-label">Lisainfo</label>              <textarea name="message" className="textarea textarea-bordered" rows="10"></textarea>            </div>
-            
-        </div>
+                    <div class="flex flex-col mb-3">
+                    <label class="form-label">Telefon</label>
+                    <input name="phone" type="tel" className="input input-bordered w-full lg:max-w-xs" required />
+                    </div>
 
-
-       </div>
-                <div class="flex flex-col items-bottom">
-                  <button className="btn btn-warning bg-[#E3C10C] w-80">Saada päring</button>
+                    <div class="flex flex-col mb-3">              
+                    <label class="form-label">Lisainfo</label>              
+                    <textarea name="message" className="textarea textarea-bordered w-full" rows="10"></textarea>
+                    </div>
+                </div>
+                </div>
+                <div class="flex flex-col items-center pb-5">
+                    <button className="btn btn-warning bg-[#E3C10C] w-80">Saada päring</button>
                 </div>
               </div>
             </div>

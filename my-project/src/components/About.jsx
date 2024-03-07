@@ -3,7 +3,7 @@ import React from 'react';
 
 function About() {
   return (
-    <section id="about">
+    <section id="visioon">
       <div
   class="flex flex-col px-20 py-12 text-3xl text-justify text-[#012579] bg-[#E3C10C]"
 >
