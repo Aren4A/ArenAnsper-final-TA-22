@@ -82,7 +82,7 @@ function Contactform() {
     };
       return (
         <section id="hind">
-          <form action="https://formsubmit.co/f37873ecf8c93f56f795cc5e4ed75d0a" method="POST">
+          <form action="https://formsubmit.co/ametikool714@gmail.com" method="POST">
             <input type="hidden" name="total" value={total} />
             {Object.entries(selectedServices).map(([service, price], index) => (
                 <input key={index} type="hidden" name={`service-${index}`} value={`${service}: ${price}`} />
@@ -165,7 +165,7 @@ function Contactform() {
                 <input name="phone" type="tel" className="input input-bordered w-full lg:max-w-xs dark:bg-white" required />
                 </div>
                 </div>
-                 <div class="flex lg:flex-row flex-col gap-4">
+                 <div class="flex flex-col gap-4">
                     <div className="form-control">
                                 
                     <label className="flex gap-2">
@@ -187,11 +187,11 @@ function Contactform() {
                         <span className="label-text text-black">Olen tegutsev väikeettevõte</span> 
                     </label>
                     </div>
-                    </div>
+                    
 
-                <div class="flex flex-col mb-3">              
+                             
                 <label class="form-label">Lisainfo</label>              
-                <textarea name="message" className="textarea textarea-bordered w-full dark:bg-white" rows="10" required></textarea>
+                <textarea name="message" className="textarea textarea-bordered w-full dark:bg-white" rows="8" required></textarea>
                 </div>
                 </div>
                 </div>
