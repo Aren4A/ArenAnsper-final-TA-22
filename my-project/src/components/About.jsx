@@ -5,7 +5,7 @@ function About() {
   return (
     <section id="about">
       <div
-  class="flex flex-col px-20 py-12 text-3xl text-justify text-blue-900 bg-yellow-400">
+  class="flex flex-col px-20 py-12 text-3xl text-justify text-[#012579] bg-[#E3C10C]">
   <div class="flex gap-5 justify-between mt-9">
     <div class="flex-auto self-end mt-10 italic">
       Kamur Finance OÜ pooldab paberivaba raamatupidamist - eelkõige
