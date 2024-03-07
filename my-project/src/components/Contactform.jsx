@@ -34,10 +34,10 @@ function Contactform() {
             {Object.entries(selectedServices).map(([service, price], index) => (
                 <input key={index} type="hidden" name={`service-${index}`} value={`${service}: ${price}`} />
             ))}
-            <div class="flex flex-col items-start px-20 pt-8 pb-1.5 bg-stone-200">
-              <div class="text-4xl text-blue-900 max-md:max-w-full">
-                Mul on ühes kalendrikuus:
-              </div>
+            <div class="flex flex-col items-start lg:px-20 px-4 pt-8 pb-1.5 bg-stone-200">
+            <div class="text-lg lg:text-4xl text-blue-900 max-md:max-w-full">
+            Mul on ühes kalendrikuus:
+            </div>
               {services.map((service, index) => (
                 <div class="flex gap-4 mt-4 sm:text-4xl text-sm text-blue-900">
                   <div>
