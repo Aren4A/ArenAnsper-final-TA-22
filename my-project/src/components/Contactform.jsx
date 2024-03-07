@@ -84,6 +84,7 @@ function Contactform() {
                 </div>
 
                 <div class="flex flex-col lg:px-20 px-4 py-12">
+                  <div class="flex flex-row">
                 <div class="flex flex-col">
                 <div class="flex flex-col mb-3">
                 <label class="form-label">Eesnimi</label>
@@ -107,11 +108,12 @@ function Contactform() {
                 <label class="form-label">Telefon</label>
                 <input name="phone" type="tel" className="input input-bordered w-full lg:max-w-xs dark:bg-white" required />
                 </div>
-
+                </div>
                 <div class="flex flex-col mb-3">              
                 <label class="form-label">Lisainfo</label>              
-                <textarea name="message" className="textarea textarea-bordered w-full dark:bg-white" rows="10"></textarea>
+                <textarea name="message" className="textarea textarea-bordered w-full dark:bg-white" rows="10" required></textarea>
                 </div>
+                
                 </div>
                 </div>
                 <div class="flex flex-col items-center pb-5">
