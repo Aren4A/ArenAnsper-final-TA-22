@@ -29,7 +29,7 @@ function Contactform() {
 
       return (
         <section id="hind">
-          <form action="https://formsubmit.co/f37873ecf8c93f56f795cc5e4ed75d0a" method="POST">
+          <form action="https://formsubmit.co/c5bcc31b02d83e069f71ebc3eeffb1b9" method="POST">
             <input type="hidden" name="total" value={total} />
             {Object.entries(selectedServices).map(([service, price], index) => (
                 <input key={index} type="hidden" name={`service-${index}`} value={`${service}: ${price}`} />
