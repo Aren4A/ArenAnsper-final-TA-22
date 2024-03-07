@@ -5,8 +5,6 @@ function Contact() {
   return (
     <section id="contact">
     
-    
-
     <form action="https://formsubmit.co/ametikoolitest@gmail.com" method="POST">
       
   <div class="text-black flex flex-row px-20 py-12">
@@ -41,13 +39,13 @@ function Contact() {
               <textarea name="message" className="textarea textarea-bordered" rows="10"></textarea>
             </div>
             
-  </div>
-  <div class="flex flex-col items-bottom">
+         </div>
+        <div class="flex flex-col items-bottom">
 
-<button className="btn btn-warning bg-[#E3C10C] w-80">Saada päring</button>
-</div>
+      <button className="btn btn-warning bg-[#E3C10C] w-80">Saada päring</button>
+      </div>
 
-  </div>
+        </div>
     </form>
     
     </section>
