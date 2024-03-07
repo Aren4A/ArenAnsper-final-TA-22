@@ -5,7 +5,7 @@ function Footer() {
     return (
         <div class="flex justify-center items-center py-20 text-4xl font-medium text-center text-blue-900 bg-yellow-500" id='kontakt'>
   <div class="flex flex-col items-center w-full">
-    <img src="/src/assets/LogoMakr.png"
+    <img src="/LogoMakr.png"
       class="max-w-full aspect-[0.77] w-[138px]"
     />
     <div class="mt-14 whitespace-nowrap">Kamur Finance OÜ</div>
