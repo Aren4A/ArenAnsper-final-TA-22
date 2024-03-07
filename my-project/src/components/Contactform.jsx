@@ -84,35 +84,33 @@ function Contactform() {
                 </div>
                 <div class="flex flex-col lg:px-20 px-4 py-12">
                 <div class="flex flex-col">
-                    <div class="flex flex-col mb-3">
-                    <label class="form-label">Eesnimi</label>
-                    <input name="first_name" type="text" className="input input-bordered w-full lg:max-w-xs" required />
-                    </div>
+                <div class="flex flex-col mb-3">
+                <label class="form-label">Eesnimi</label>
+                <input name="first_name" type="text" className="input input-bordered w-full lg:max-w-xs dark:bg-white" required />
+                </div>
+                <div class="flex flex-col mb-3">
+                <label class="form-label">Perekonnanimi</label>
+                <input name="last_name" type="text" className="input input-bordered w-full lg:max-w-xs dark:bg-white" required />
+                </div>
+                <div class="flex flex-col mb-3">
+                <label class="form-label">Ettevõtte nimi</label>
+                <input name="company_name" type="text" className="input input-bordered w-full lg:max-w-xs dark:bg-white" required />
+                </div>
 
-                    <div class="flex flex-col mb-3">
-                    <label class="form-label">Perekonnanimi</label>
-                    <input name="last_name" type="text" className="input input-bordered w-full lg:max-w-xs" required />
-                    </div>
+                <div class="flex flex-col mb-3">
+                <label class="form-label">Email</label>
+                <input name="email" type="email" className="input input-bordered w-full lg:max-w-xs dark:bg-white" required />
+                </div>
 
-                    <div class="flex flex-col mb-3">
-                    <label class="form-label">Ettevõtte nimi</label>
-                    <input name="company_name" type="text" className="input input-bordered w-full lg:max-w-xs" required />
-                    </div>
+                <div class="flex flex-col mb-3">
+                <label class="form-label">Telefon</label>
+                <input name="phone" type="tel" className="input input-bordered w-full lg:max-w-xs dark:bg-white" required />
+                </div>
 
-                    <div class="flex flex-col mb-3">
-                    <label class="form-label">Email</label>
-                    <input name="email" type="email" className="input input-bordered w-full lg:max-w-xs" required />
-                    </div>
-
-                    <div class="flex flex-col mb-3">
-                    <label class="form-label">Telefon</label>
-                    <input name="phone" type="tel" className="input input-bordered w-full lg:max-w-xs" required />
-                    </div>
-
-                    <div class="flex flex-col mb-3">              
-                    <label class="form-label">Lisainfo</label>              
-                    <textarea name="message" className="textarea textarea-bordered w-full" rows="10"></textarea>
-                    </div>
+                <div class="flex flex-col mb-3">              
+                <label class="form-label">Lisainfo</label>              
+                <textarea name="message" className="textarea textarea-bordered w-full dark:bg-white" rows="10"></textarea>
+                </div>
                 </div>
                 </div>
                 <div class="flex flex-col items-center pb-5">
