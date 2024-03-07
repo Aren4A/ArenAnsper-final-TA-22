@@ -36,15 +36,15 @@ function Contact() {
               <input name="phone" type="tel" className="input input-bordered w-full max-w-xs" required />
             </div>
 
-            <div class="flex flex-col mb-3 w-1/2">
+            <div class="flex flex-col mb-3">
               <label class="form-label">Lisainfo</label>
               <textarea name="message" className="textarea textarea-bordered" rows="10"></textarea>
             </div>
             
   </div>
-  <div class="flex flex-col">
+  <div class="flex flex-col items-bottom">
 
-<button className="btn btn-warning bg-[#E3C10C]">Saada päring</button>
+<button className="btn btn-warning bg-[#E3C10C] w-80">Saada päring</button>
 </div>
 
   </div>
