@@ -82,6 +82,7 @@ function Contactform() {
               <div class="flex flex-col">
                 <div class="flex flex-col mb-3">
                 </div>
+
                 <div class="flex flex-col lg:px-20 px-4 py-12">
                 <div class="flex flex-col">
                 <div class="flex flex-col mb-3">
