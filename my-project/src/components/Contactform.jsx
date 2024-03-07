@@ -109,10 +109,36 @@ function Contactform() {
                 <input name="phone" type="tel" className="input input-bordered w-full lg:max-w-xs dark:bg-white" required />
                 </div>
                 </div>
+                <div class="flex flex-col">
+                  
+                  <div class="flex lg:flex-row flex-col gap-4">
+  <div className="form-control">
+              
+  <label className="flex gap-2">
+    <input type="checkbox" className="checkbox" />
+    <span className="label-text">Olen käibemaksukohustuslane</span> 
+  </label>
+</div>
+
+<div className="form-control">
+<label className="flex gap-2">
+    <input type="checkbox" className="checkbox" />
+    <span className="label-text">Olen alustav mikroettevõte ja vajan abi raamatupidamise sisseseadmisel</span> 
+  </label>
+</div>
+
+<div className="form-control">
+<label className="flex gap-2">
+    <input type="checkbox" className="checkbox" />
+    <span className="label-text">Olen tegutsev väikeettevõte</span> 
+  </label>
+</div>
+</div>
 
                 <div class="flex flex-col mb-3">              
                 <label class="form-label">Lisainfo</label>              
                 <textarea name="message" className="textarea textarea-bordered w-full dark:bg-white" rows="10" required></textarea>
+                </div>
                 </div>
                 
                 </div>
