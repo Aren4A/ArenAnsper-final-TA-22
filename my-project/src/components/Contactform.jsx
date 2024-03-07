@@ -29,12 +29,12 @@ function Contactform() {
 
       return (
         <section id="hind">
-          <form action="https://formsubmit.co/ametikoolitest@gmail.com" method="POST">
+          <form action="https://formsubmit.co/f37873ecf8c93f56f795cc5e4ed75d0a" method="POST">
             <input type="hidden" name="total" value={total} />
             {Object.entries(selectedServices).map(([service, price], index) => (
                 <input key={index} type="hidden" name={`service-${index}`} value={`${service}: ${price}`} />
             ))}
-            <div class="flex flex-col items-start lg:px-20 px-4 pt-8 pb-1.5 bg-stone-200">
+            <div class="flex flex-col items-start lg:px-20 px-4 pt-8 pb-1.5  text-[#E6E5E0]">
             <div class="text-lg lg:text-4xl text-blue-900 max-md:max-w-full">
             Mul on ühes kalendrikuus:
             </div>
