@@ -47,9 +47,9 @@ function Contact() {
             </div>
             
   </div>
-  <div class="flex flex-col h-12 w-80 rounded-xl text-[#012579] bg-[#E3C10C]">
+  <div class="flex flex-col">
 
-<button class="btn btn-primary">Saada päring</button>
+<button className="btn btn-warning bg-[#E3C10C]">Saada päring</button>
 </div>
 
   </div>
