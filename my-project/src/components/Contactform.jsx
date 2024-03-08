@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 function Contactform() {
     const [total, setTotal] = useState(0);
@@ -80,9 +81,29 @@ function Contactform() {
             }
         }
     };
+    //
+    const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_p5mxn2a', 'contact_form', form.current, {
+        publicKey: 'NuE1gTFl8K5yX9qCN',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+    //
       return (
         <section id="hind">
-          <form action="https://formsubmit.co/ametikool714@gmail.com" method="POST">
+          <form ref={form} onSubmit={sendEmail}>
             <input type="hidden" name="total" value={total} />
             {Object.entries(selectedServices).map(([service, price], index) => (
                 <input key={index} type="hidden" name={`service-${index}`} value={`${service}: ${price}`} />
@@ -144,7 +165,7 @@ function Contactform() {
                 <div class="flex flex-col">
                 <div class="flex flex-col mb-3">
                 <label class="form-label">Eesnimi</label>
-                <input name="first_name" type="text" className="input input-bordered w-full lg:max-w-xs dark:bg-white" required />
+                <input name="user_name" type="text" className="input input-bordered w-full lg:max-w-xs dark:bg-white" required />
                 </div>
                 <div class="flex flex-col mb-3">
                 <label class="form-label">Perekonnanimi</label>
@@ -157,7 +178,7 @@ function Contactform() {
 
                 <div class="flex flex-col mb-3">
                 <label class="form-label">Email</label>
-                <input name="email" type="email" className="input input-bordered w-full lg:max-w-xs dark:bg-white" required />
+                <input name="user_email" type="email" className="input input-bordered w-full lg:max-w-xs dark:bg-white" required />
                 </div>
 
                 <div class="flex flex-col mb-3">
@@ -169,21 +190,21 @@ function Contactform() {
                     <div className="form-control">
                                 
                     <label className="flex gap-2">
-                        <input type="checkbox" className=" checkbox checkbox-warning" />
+                        <input name="kaibemaksukohustuslane" type="checkbox" className=" checkbox checkbox-warning" />
                         <span className="label-text text-black ">Olen käibemaksukohustuslane</span> 
                     </label>
                     </div>
 
                     <div className="form-control">
                     <label className="flex gap-2">
-                        <input type="checkbox" className=" checkbox checkbox-warning" />
+                        <input name="abivajadus" type="checkbox" className=" checkbox checkbox-warning" />
                         <span className="label-text text-black">Olen alustav mikroettevõte ja vajan abi raamatupidamise sisseseadmisel</span> 
                     </label>
                     </div>
 
                     <div className="form-control">
                     <label className="flex gap-2">
-                        <input type="checkbox" className=" checkbox checkbox-warning" />
+                        <input name="vaikeettevõte" type="checkbox" className=" checkbox checkbox-warning" />
                         <span className="label-text text-black">Olen tegutsev väikeettevõte</span> 
                     </label>
                     </div>
@@ -200,8 +221,6 @@ function Contactform() {
                 </div>
               </div>
             </div>
-            <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you" />
-            <input type="hidden" name="_captcha" value="false" />
           </form>
         </section>
       );
