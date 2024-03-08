@@ -114,7 +114,7 @@ function Contactform() {
             Mul on ühes kalendrikuus:
             </div>
                 {services.map((service, index) => (
-                <div class="flex gap-4 mt-1 sm:text-2xl text-sm text-blue-900">
+                <div class="flex gap-4 sm:text-2xl text-sm text-blue-900">
                 <div>
                     <div className="flex">
                     <label className="cursor-pointer label gap-4">
