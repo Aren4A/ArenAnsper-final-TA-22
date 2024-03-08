@@ -88,11 +88,11 @@ function Contactform() {
                 <input key={index} type="hidden" name={`service-${index}`} value={`${service}: ${price}`} />
             ))}
             <div class="flex flex-col items-start lg:px-20 px-4 pt-8 pb-1.5  text-[#E6E5E0]">
-            <div class="text-lg lg:text-4xl text-blue-900 max-md:max-w-full">
+            <div class="text-lg lg:text-2xl text-blue-900 max-md:max-w-full">
             Mul on ühes kalendrikuus:
             </div>
                 {services.map((service, index) => (
-                <div class="flex gap-4 mt-4 sm:text-4xl text-sm text-blue-900">
+                <div class="flex gap-4 mt-1 sm:text-2xl text-sm text-blue-900">
                 <div>
                     <div className="flex">
                     <label className="cursor-pointer label gap-4">
@@ -110,9 +110,9 @@ function Contactform() {
                 </div>
                 </div>
             ))}
-              <div class="flex gap-5 justify-between mt-14 w-full max-w-[1107px]">
+              <div class="flex gap-5 justify-between mt-2 w-full max-w-[1107px]">
                 <div class="flex gap-1.5 my-auto text-2xl text-blue-900">
-                  <div class="flex align-middle sm:text-4xl text-sm">
+                  <div class="flex align-middle sm:text-2xl text-sm">
                   <input 
                         id="hourly-accounting-checkbox" 
                         name="hourly-accounting" 
@@ -124,13 +124,13 @@ function Contactform() {
                   </div>
                 </div>
                 <div class="flex gap-3.5">
-                    <div class="grow justify-center px-8 py-4 text-4xl text-black bg-white border border-black border-solid max-md:px-5">{total}</div>
-                    <div class="grow my-auto sm:text-4xl text-sm  text-blue-900">
+                    <div class="grow justify-center px-7 py-3 text-2xl text-black bg-white border border-black border-solid max-md:px-5">{total}</div>
+                    <div class="grow my-auto sm:text-2xl text-sm  text-blue-900">
                         <p> {hourlyAccounting ? '€/tunnis' : '€/kuus'}</p>
                     </div>
                 </div>
               </div>
-              <div class=" flex justify-end mr-3 self-end mt-3.5 text-base text-blue-900">
+              <div class=" flex justify-end mr-10 self-end mt-5.5 text-base text-blue-900">
                 *täpne hind kujuneb personaalse kokkuleppe alusel
               </div>
             </div>
@@ -208,4 +208,3 @@ function Contactform() {
 }
 
 export default Contactform;
-
