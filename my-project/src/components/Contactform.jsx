@@ -11,21 +11,22 @@ function Contactform() {
     const [hourlyAccounting, setHourlyAccounting] = useState(false); // New state for the "Soovin tunnipõhist raamatupidamist" checkbox
     const services = [
         // Group 1
-        { label: 'Palgaarvestus 1 töötaja', price: 10, group: 1, index: 0 },
-        { label: 'Palgaarvestus 2-10 töötajat', price: 20, group: 1, index: 1 },
+        { label: 'Palgaarvestus 1 töötaja', price: 30, group: 1, index: 0 },
+        { label: 'Palgaarvestus 2-10 töötajat', price: 55, group: 1, index: 1 },
         // Group 2
-        { label: 'Ostuarved kuni 10tk/kuus (EE)', price: 20, group: 2, index: 0 },
-        { label: 'Ostuarved 10-50 tk kuus (EE)', price: 20, group: 2, index: 1 },
+        { label: 'Ostuarved kuni 10tk/kuus (EE)', price: 25, group: 2, index: 0 },
+        { label: 'Ostuarved 10-50 tk kuus (EE)', price: 50, group: 2, index: 1 },
         // Group 3
-        { label: 'Müügiarved 1 -  5 tk/kuus', price: 20, group: 3, index: 0 },
-        { label: 'Müügiarved 6 - 15 tk', price: 20, group: 3, index: 1 },
+        { label: 'Müügiarved 1 -  5 tk/kuus', price: 25, group: 3, index: 0 },
+        { label: 'Müügiarved 6 - 15 tk', price: 40, group: 3, index: 1 },
         // Other checkboxes
-        { label: 'Käibedeklaratsiooni esitamine', price: 30, },
-        { label: 'Majandusaasta ülevaatus koos aruande esitamisega RIK-ile (mikroettevōte)', price: 40 },
-        { label: 'Majandusaasta aruande esitamine RIK-ile', price: 50 },
-        { label: 'Ostuarved EU, USA, GBP kuni 5 tk', price: 50 },
-        { label: 'Dividendide deklareerimine', price: 50 },
-        { label: 'Üksikute kannetega abistamine (sōiduauto kompensatsioon, osakapitali sissemaksmine jne)', price: 50 },
+        { label: 'Käibedeklaratsiooni esitamine', price: 25, },
+        { label: 'TSD esitamine', price: 25, },
+        { label: 'Majandusaasta ülevaatus koos aruande esitamisega RIK-ile (mikroettevōte)', price: 200 },
+        { label: 'Majandusaasta aruande esitamine RIK-ile', price: 100 },
+        { label: 'Ostuarved EU, USA, GBP kuni 5 tk', price: 30 },
+        { label: 'Dividendide deklareerimine', price: 30 },
+        { label: 'Üksikute kannetega abistamine (sōiduauto kompensatsioon, osakapitali sissemaksmine jne)', price: 25 },
     ];
     const [otherChecked, setOtherChecked] = useState(false);
     const handleCheck = (isChecked, service) => {
