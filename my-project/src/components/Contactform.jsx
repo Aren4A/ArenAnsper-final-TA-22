@@ -130,7 +130,7 @@ function Contactform() {
                     </div>
                 </div>
               </div>
-              <div class=" flex justify-end mr-10 self-end mt-5.5 text-base text-blue-900">
+              <div class=" flex justify-end mr-15 self-end mt-5.5 text-base text-blue-900">
                 *täpne hind kujuneb personaalse kokkuleppe alusel
               </div>
             </div>
