@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { toppings } from "../utils/toppings";
 
 function Contactform() {
     const [total, setTotal] = useState(0);
@@ -9,6 +10,20 @@ function Contactform() {
     const [group3, setGroup3] = useState([false, false]);
     const [lastChecked, setLastChecked] = useState({ 1: null, 2: null, 3: null });
     const [hourlyAccounting, setHourlyAccounting] = useState(false); // New state for the "Soovin tunnipõhist raamatupidamist" checkbox
+    
+    const [checkedState, setCheckedState] = useState(
+      new Array(toppings.length).fill(false)
+    );
+  
+  
+    const handleOnChange = (position) => {
+      const updatedCheckedState = checkedState.map((item, index) =>
+        index === position ? !item : item
+      );
+  
+      setCheckedState(updatedCheckedState);
+    };
+    
     const services = [
         // Group 1
         { label: 'Palgaarvestus 1 töötaja', price: 30, group: 1, index: 0 },
@@ -125,6 +140,7 @@ function Contactform() {
                         onChange={(e) => handleCheck(e.target.checked, service)} 
                         className="checkbox checkbox-warning" 
                         checked={service.group === 1 ? group1[service.index] : service.group === 2 ? group2[service.index] : group3[service.index]} // Set the checked property based on the group state
+                        disabled={group1.some(checked => checked)}
                         />
                         <span className="">{service.label}</span>
                     </label>
@@ -188,26 +204,37 @@ function Contactform() {
                 </div>
                 </div>
                  <div className="flex flex-col gap-4">
-                    <div className="form-control">     
-                    <label className="flex gap-2">
-                        <input type="checkbox" name="kaibemaksukohustuslaneID" value="checked" className="checkbox checkbox-warning" />
-                        <label className="label-text text-black ">Olen käibemaksukohustuslane</label> 
-                    </label>
-                    </div>
 
-                    <div className="form-control">
-                    <label className="flex gap-2">
-                        <input type="checkbox" name="abivajadusID" value="abivajadus" className="checkbox checkbox-warning" />
-                        <label className="label-text text-black">Olen alustav mikroettevõte ja vajan abi raamatupidamise sisseseadmisel</label> 
-                    </label>
-                    </div>
+                 <div className="App">
+      <ul className="toppings-list flex flex-col gap-4">
+        {toppings.map(({ name }, index) => {
+          return (
+            <li key={index}>
+              <div className="toppings-list-item">
+                <div className="left-section flex gap-2">
+                  <input
+                    type="checkbox"
+                    id={`custom-checkbox-${index}`}
+                    name={`custom-checkbox-${index}`}
+                    value={name}
+                    className="checkbox checkbox-warning"
+                    checked={checkedState[index]}
+                    onChange={() => handleOnChange(index)}
+                  />
+                  <label htmlFor={`custom-checkbox-${index}`}> {name}</label>
+                </div>
+              </div>
+            </li>
+          );
+        })}
+        <li>
+          <div className="toppings-list-item">
+          </div>
+        </li>
+      </ul>
+    </div>
 
-                    <div className="form-control">
-                    <label className="flex gap-2">
-                        <input type="checkbox" name="vaikeettevoteID" value="vaikeettevote" className="checkbox checkbox-warning" />
-                        <label className="label-text text-black">Olen tegutsev väikeettevõte</label> 
-                    </label>
-                    </div>
+
                     
 
                              
