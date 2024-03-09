@@ -109,12 +109,12 @@ function Contactform() {
             {Object.entries(selectedServices).map(([service, price], index) => (
                 <input key={index} type="hidden" name={`service-${index}`} value={`${service}: ${price}`} />
             ))}
-            <div class="flex flex-col items-start lg:px-20 px-4 pt-8 pb-1.5  text-[#E6E5E0]">
-            <div id="hind" class="text-lg lg:text-2xl text-blue-900 max-md:max-w-full">
+            <div className="flex flex-col items-start lg:px-20 px-4 pt-8 pb-1.5  text-[#E6E5E0]">
+            <div id="hind" className="text-lg lg:text-2xl text-blue-900 max-md:max-w-full">
             Mul on ühes kalendrikuus:
             </div>
                 {services.map((service, index) => (
-                <div class="flex gap-4 sm:text-2xl text-sm text-blue-900">
+                <div className="flex gap-4 sm:text-2xl text-sm text-blue-900">
                 <div>
                     <div className="flex">
                     <label className="cursor-pointer label gap-4">
@@ -132,9 +132,9 @@ function Contactform() {
                 </div>
                 </div>
             ))}
-              <div class="flex gap-5 justify-between mt-2 w-full max-w-[1107px]">
-                <div class="flex gap-1.5 my-auto text-2xl text-blue-900">
-                  <div class="flex align-middle sm:text-2xl text-sm">
+              <div className="flex gap-5 justify-between mt-2 w-full max-w-[1107px]">
+                <div className="flex gap-1.5 my-auto text-2xl text-blue-900">
+                  <div className="flex align-middle sm:text-2xl text-sm">
                   <input 
                         id="hourly-accounting-checkbox" 
                         name="hourly-accounting" 
@@ -142,52 +142,52 @@ function Contactform() {
                         className="checkbox checkbox-warning mt-1.5"
                         onChange={(e) => handleCheck(e.target.checked, { label: 'soovin tunnipõhist raamatupidamist', price: 50 })}
                         disabled={group1.some(checked => checked) || group2.some(checked => checked) || group3.some(checked => checked) || otherChecked}                    />
-                    <label for="hourly-accounting-checkbox" class="ms-3 flex-auto">Soovin tunnipõhist raamatupidamist</label>
+                    <label for="hourly-accounting-checkbox" className="ms-3 flex-auto">Soovin tunnipõhist raamatupidamist</label>
                   </div>
                 </div>
-                <div class="flex gap-3.5">
-                    <div class="grow justify-center px-7 py-3 text-2xl text-black bg-white border border-black border-solid max-md:px-5">{total}</div>
-                    <div class="grow my-auto sm:text-2xl text-sm  text-blue-900">
+                <div className="flex gap-3.5">
+                    <div className="grow justify-center px-7 py-3 text-2xl text-black bg-white border border-black border-solid max-md:px-5">{total}</div>
+                    <div className="grow my-auto sm:text-2xl text-sm  text-blue-900">
                         <p> {hourlyAccounting ? '€/tunnis' : '€/kuus'}</p>
                     </div>
                 </div>
               </div>
-              <div class=" flex justify-end mr-15 self-end mt-3.5 text-base text-blue-900">
+              <div className=" flex justify-end mr-15 self-end mt-3.5 text-base text-blue-900">
                 *täpne hind kujuneb personaalse kokkuleppe alusel
               </div>
             </div>
-            <div class="text-black flex flex-row">
-              <div class="flex flex-col">
-                <div class="flex flex-col mb-3">
+            <div className="text-black flex flex-row">
+              <div className="flex flex-col">
+                <div className="flex flex-col mb-3">
                 </div>
 
-                <div class="flex flex-col lg:px-20 px-4 py-12">
-                  <div class="flex flex-col lg:flex-row">
-                <div class="flex flex-col">
-                <div class="flex flex-col mb-3">
-                <label class="form-label">Eesnimi</label>
+                <div className="flex flex-col lg:px-20 px-4 py-12">
+                  <div className="flex flex-col lg:flex-row">
+                <div className="flex flex-col">
+                <div className="flex flex-col mb-3">
+                <label className="form-label">Eesnimi</label>
                 <input name="user_name" type="text" className="input input-bordered w-full lg:max-w-xs dark:bg-white" required />
                 </div>
-                <div class="flex flex-col mb-3">
-                <label class="form-label">Perekonnanimi</label>
+                <div className="flex flex-col mb-3">
+                <label className="form-label">Perekonnanimi</label>
                 <input name="last_name" type="text" className="input input-bordered w-full lg:max-w-xs dark:bg-white" required />
                 </div>
-                <div class="flex flex-col mb-3">
-                <label class="form-label">Ettevõtte nimi</label>
+                <div className="flex flex-col mb-3">
+                <label className="form-label">Ettevõtte nimi</label>
                 <input name="company_name" type="text" className="input input-bordered w-full lg:max-w-xs dark:bg-white" required />
                 </div>
 
-                <div class="flex flex-col mb-3">
-                <label class="form-label">Email</label>
+                <div className="flex flex-col mb-3">
+                <label className="form-label">Email</label>
                 <input name="user_email" type="email" className="input input-bordered w-full lg:max-w-xs dark:bg-white" required />
                 </div>
 
-                <div class="flex flex-col mb-3">
-                <label class="form-label">Telefon</label>
+                <div className="flex flex-col mb-3">
+                <label className="form-label">Telefon</label>
                 <input name="phone" type="tel" className="input input-bordered w-full lg:max-w-xs dark:bg-white" required />
                 </div>
                 </div>
-                 <div class="flex flex-col gap-4">
+                 <div className="flex flex-col gap-4">
                     <div className="form-control">     
                     <label className="flex gap-2">
                         <input type="checkbox" name="kaibemaksukohustuslaneID" value="checked" className="checkbox checkbox-warning" />
@@ -211,12 +211,12 @@ function Contactform() {
                     
 
                              
-                <label class="form-label">Lisainfo</label>              
+                <label className="form-label">Lisainfo</label>              
                 <textarea name="message" className="textarea textarea-bordered w-full dark:bg-white" rows="8" required></textarea>
                 </div>
                 </div>
                 </div>
-                <div class="flex flex-col items-center pb-5">
+                <div className="flex flex-col items-center pb-5">
                     <button className="btn btn-warning bg-[#E3C10C] w-80">Saada päring</button>
                 </div>
               </div>
