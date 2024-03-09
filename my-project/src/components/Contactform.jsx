@@ -188,25 +188,24 @@ function Contactform() {
                 </div>
                 </div>
                  <div class="flex flex-col gap-4">
-                    <div className="form-control">
-                                
+                    <div className="form-control">     
                     <label className="flex gap-2">
-                        <input name="kaibemaksukohustuslane" type="checkbox" className=" checkbox checkbox-warning" />
-                        <span className="label-text text-black ">Olen käibemaksukohustuslane</span> 
+                        <input type="checkbox" name="kaibemaksukohustuslaneID" value="checked" className="checkbox checkbox-warning" />
+                        <label className="label-text text-black ">Olen käibemaksukohustuslane</label> 
                     </label>
                     </div>
 
                     <div className="form-control">
                     <label className="flex gap-2">
-                        <input name="abivajadus" type="checkbox" className=" checkbox checkbox-warning" />
-                        <span className="label-text text-black">Olen alustav mikroettevõte ja vajan abi raamatupidamise sisseseadmisel</span> 
+                        <input type="checkbox" name="abivajadusID" value="abivajadus" className="checkbox checkbox-warning" />
+                        <label className="label-text text-black">Olen alustav mikroettevõte ja vajan abi raamatupidamise sisseseadmisel</label> 
                     </label>
                     </div>
 
                     <div className="form-control">
                     <label className="flex gap-2">
-                        <input name="vaikeettevõte" type="checkbox" className=" checkbox checkbox-warning" />
-                        <span className="label-text text-black">Olen tegutsev väikeettevõte</span> 
+                        <input type="checkbox" name="vaikeettevoteID" value="vaikeettevote" className="checkbox checkbox-warning" />
+                        <label className="label-text text-black">Olen tegutsev väikeettevõte</label> 
                     </label>
                     </div>
                     
