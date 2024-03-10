@@ -1,4 +1,4 @@
-export const toppings = [
+export const infoboxes = [
   {
     name: "Olen käibemaksukohustuslane",
   },

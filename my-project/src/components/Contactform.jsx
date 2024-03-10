@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import { toppings } from "../utils/toppings";
+import { infoboxes } from "../utils/infoboxes";
 
 function Contactform() {
     const [total, setTotal] = useState(0);
@@ -12,7 +12,7 @@ function Contactform() {
     const [hourlyAccounting, setHourlyAccounting] = useState(false); // New state for the "Soovin tunnipõhist raamatupidamist" checkbox
     
     const [checkedState, setCheckedState] = useState(
-      new Array(toppings.length).fill(false)
+      new Array(infoboxes.length).fill(false)
     );
   
   
@@ -205,13 +205,11 @@ function Contactform() {
                 </div>
                  <div className="flex flex-col gap-4">
 
-                 <div className="App">
-      <ul className="toppings-list flex flex-col gap-4">
-        {toppings.map(({ name }, index) => {
+      <ul className="flex flex-col gap-4">
+        {infoboxes.map(({ name }, index) => {
           return (
             <li key={index}>
-              <div className="toppings-list-item">
-                <div className="left-section flex gap-2">
+                <div className="flex gap-2">
                   <input
                     type="checkbox"
                     id={`custom-checkbox-${index}`}
@@ -223,16 +221,10 @@ function Contactform() {
                   />
                   <label htmlFor={`custom-checkbox-${index}`}> {name}</label>
                 </div>
-              </div>
             </li>
           );
         })}
-        <li>
-          <div className="toppings-list-item">
-          </div>
-        </li>
       </ul>
-    </div>
 
 
                     
