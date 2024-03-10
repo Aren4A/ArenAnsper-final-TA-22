@@ -162,7 +162,7 @@ function Contactform() {
                   </div>
                 </div>
                 <div className="flex gap-3.5">
-                    <div className="grow justify-center px-7 py-3 text-2xl text-black bg-white border border-black border-solid max-md:px-5">{total}</div>
+                    <div className="bg-[#E3C10C] px-2 py-1 text-3xl text-black max-md:px-5 w-40 input max-w-xs">{total}</div>
                     <div className="grow my-auto sm:text-2xl text-sm  text-blue-900">
                         <p> {hourlyAccounting ? '€/tunnis' : '€/kuus'}</p>
                     </div>
