@@ -35,7 +35,7 @@ function Contactform() {
         { label: 'Müügiarved 1 -  5 tk/kuus', price: 25, group: 3, index: 0 },
         { label: 'Müügiarved 6 - 15 tk', price: 40, group: 3, index: 1 },
         // Other checkboxes
-        { label: 'Käibedeklaratsiooni esitamine', price: 25, },
+        { label: 'Käibedeklaratsiooni esitamine (KMD)', price: 25, },
         { label: 'TSD esitamine', price: 25, },
         { label: 'Majandusaasta ülevaatus koos aruande esitamisega RIK-ile (mikroettevōte)', price: 200 },
         { label: 'Majandusaasta aruande esitamine RIK-ile', price: 100 },
