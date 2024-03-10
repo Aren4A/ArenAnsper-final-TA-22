@@ -32,3 +32,10 @@ div {
   height: 100%; /* full height of parent */
 }
 
+.dancing-script {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
