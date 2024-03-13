@@ -71,7 +71,7 @@ function Contactform() {
         // Add the price of the newly checked service or subtract the price of the unchecked service
         if (isChecked) {
             newTotal += service.price;
-        } else {
+        } else if (newTotal > 0) {
             newTotal -= service.price;
         }
         setTotal(newTotal);
@@ -89,6 +89,8 @@ function Contactform() {
                 } else if (service.group === 3) {
                     setGroup3(group3.map((value, index) => index === service.index ? isChecked : false));
                 }
+            
+
 
                 setLastChecked(prevLastChecked => ({
                   ...prevLastChecked,
@@ -139,7 +141,7 @@ function Contactform() {
                         name={`service-${index}`} 
                         onChange={(e) => handleCheck(e.target.checked, service)} 
                         className="checkbox checkbox-warning" 
-                        checked={service.group === 1 ? group1[service.index] : service.group === 2 ? group2[service.index] : group3[service.index]} // Set the checked property based on the group state
+                        checked={service.group === 1 ? group1[service.index] : service.group === 2 ? group2[service.index] : group3[service.index] } // Set the checked property based on the group state
                         disabled={hourlyAccounting}
                         />
                         <span className="">{service.label}</span>
