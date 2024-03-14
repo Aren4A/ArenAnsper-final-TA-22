@@ -8,6 +8,7 @@ function Contactform() {
     const [group1, setGroup1] = useState([false, false]);
     const [group2, setGroup2] = useState([false, false]);
     const [group3, setGroup3] = useState([false, false]);
+    const [group4, setGroup4] = useState([false, false, false, false, false, false, false]);
     const [lastChecked, setLastChecked] = useState({ 1: null, 2: null, 3: null });
     const [hourlyAccounting, setHourlyAccounting] = useState(false); // New state for the "Soovin tunnipõhist raamatupidamist" checkbox
     
