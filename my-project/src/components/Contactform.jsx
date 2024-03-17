@@ -21,7 +21,7 @@ function Contactform() {
   // Example function to navigate to a different route
   const handleClick = () => {
     // Navigate to a specific route
-    history.push("/hind");
+    history.push("/");
   };
     
   
