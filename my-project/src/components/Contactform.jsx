@@ -2,7 +2,8 @@ import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { infoboxes } from "../utils/infoboxes";
 import { services } from "../utils/services";
-import { useHistory } from "react-router-dom";
+import { Link } from 'react-router-dom';
+
 
 function Contactform() {
     const [total, setTotal] = useState(0);
@@ -16,13 +17,6 @@ function Contactform() {
     const [checkedState, setCheckedState] = useState(
       new Array(services.length).fill(false)
     );
-    const history = useHistory();
-
-  // Example function to navigate to a different route
-  const handleClick = () => {
-    // Navigate to a specific route
-    history.push("/");
-  };
     
   
   
@@ -95,11 +89,13 @@ function Contactform() {
       .then(
         () => {
           console.log('SUCCESS!');
+          window.location.href = "/";
         },
         (error) => {
           console.log('FAILED...', error.text);
         },
       );
+      
   };
     //
       return (
@@ -233,11 +229,12 @@ function Contactform() {
                 </div>
                 </div>
                 <div className="flex flex-col items-center pb-5">
-                    <button onClick={handleClick} className="btn btn-warning bg-[#E3C10C] w-80">Saada päring</button>
+                  <button className="btn btn-warning bg-[#E3C10C] w-80">Saada päring</button>
                 </div>
               </div>
             </div>
           </form>
+          <Link to="/about">Go to Home Page</Link>
         </section>
       );
 }
