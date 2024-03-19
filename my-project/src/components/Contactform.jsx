@@ -105,7 +105,7 @@ function Contactform() {
             {Object.entries(services).map(([name, price], index) => (
                 <input type="hidden" name={`service-${index}`} />
             ))}
-            <div className="flex flex-col items-start lg:px-20 px-4 pt-8 pb-1.5  text-[#E6E5E0]">
+            <div className="flex flex-col items-start lg:px-20 px-4 pt-20 pb-1.5  text-[#E6E5E0]">
             <div id="hind" className="text-lg lg:text-2xl text-blue-900 max-md:max-w-full">
             Mul on ühes kalendrikuus:
             </div>
