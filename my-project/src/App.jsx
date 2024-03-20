@@ -14,8 +14,6 @@ function App() {
         <About />
         <Contactform />
         <Routes>
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contactform />} />
           <Route path="/" element={<Home />} />
         </Routes>
         <Footer />
@@ -25,7 +23,7 @@ function App() {
 }
 
 function Home() {
-  return <h1>Welcome to the Home Page</h1>;
+  return;
 }
 
 export default App;
