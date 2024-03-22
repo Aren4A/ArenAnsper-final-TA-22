@@ -236,7 +236,7 @@ function Contactform() {
               </div>
             </div>
           </form>
-          <Link to="/about"></Link>
+          <Link to="/"></Link>
         </section>
       );
 }
