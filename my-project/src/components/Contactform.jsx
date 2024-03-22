@@ -105,25 +105,37 @@ function Contactform() {
             {Object.entries(services).map(([name, price], index) => (
                 <input type="hidden" name={`service-${index}`} />
             ))}
-            <div className="flex flex-col items-start lg:px-20 px-4 pt-20 pb-1.5  text-[#E6E5E0]">
-            <div id="hind" className="text-lg lg:text-2xl text-blue-900 max-md:max-w-full">
-            Mul on ühes kalendrikuus:
+            <div className="flex flex-col items-start lg:px-20 px-4 pt-20 pb-1.5 text-[#E6E5E0]">
+            <div id="hind" className="text-lg lg:text-2xl text-blue-900 max-md:max-w-full font-bold">
+            Vali tunnipõhine arvestus või pane ise pakett kokku:
             </div>
 
-              <div className="flex flex-col gap-5 justify-between mt-2 w-full max-w-[1107px]">
+              <div className="flex flex-col pl-1 lg:pl-0 gap-5 justify-between mt-2 w-full max-w-[1107px]">
 
+              <div className="flex gap-1.5 my-auto text-2xl text-blue-900">
+                  <div className="flex gap-4 items-center lg:text-2xl text-xl">
+                  <input 
+                        id="hourly-accounting-checkbox" 
+                        name="hourly-accounting" 
+                        type="checkbox" 
+                        className="bg-base-100 checkbox checkbox-warning mt-1.5"
+                        onChange={(e) => handleCheck(e.target.checked, { label: 'soovin tunnipõhist raamatupidamist', price: 50 })}
+                        disabled={checkedState.some(checked => checked)}                    />
+                    <label for="hourly-accounting-checkbox">Soovin tunnipõhist raamatupidamist</label>
+                  </div>
+                </div>
               <ul>
 
             {services.map(({ name}, index) => {
           return (
             <li key={index}>
-              <div className="flex gap-4 py-2 sm:text-2xl text-sm text-blue-900">
-                <div className="flex items-center gap-2">
+              <div className="flex gap-4 py-2 lg:text-2xl text-xl text-blue-900 lg:w-[700px]">
+                <div className="flex items-center gap-4">
                   <input
                     type="checkbox"
                     id={`custom-checkbox-${index}`}
                     name={`service-${index}`}
-                    className="checkbox checkbox-warning"
+                    className="bg-base-100 checkbox checkbox-warning"
                     checked={checkedState[index]}
                     onChange={() => handleOnChange(index)}
                     disabled={hourlyAccounting}
@@ -136,31 +148,20 @@ function Contactform() {
         })}
             
               </ul>
-              <div className="flex gap-1.5 my-auto text-2xl text-blue-900">
-                  <div className="flex items-center sm:text-2xl text-sm">
-                  <input 
-                        id="hourly-accounting-checkbox" 
-                        name="hourly-accounting" 
-                        type="checkbox" 
-                        className="checkbox checkbox-warning mt-1.5"
-                        onChange={(e) => handleCheck(e.target.checked, { label: 'soovin tunnipõhist raamatupidamist', price: 50 })}
-                        disabled={checkedState.some(checked => checked)}                    />
-                    <label for="hourly-accounting-checkbox" className="flex ms-2">Soovin tunnipõhist raamatupidamist</label>
-                  </div>
-                </div>
+              
 
                 
-                <div className="flex gap-3.5">
+                <div className="flex gap-2 sticky lg:bottom-2">
                   <div className="flex justify-end">
                     <div className="bg-[#E3C10C] px-2 py-1 text-3xl text-black max-md:px-5 w-40 input max-w-xs">{total}</div>
                     </div>
-                    <div className="flex justify-end w-20 grow my-auto sm:text-2xl text-sm  text-blue-900">
+                    <div className="flex w-20 grow my-auto text-2xl text-blue-900">
                         <p> {hourlyAccounting ? '€/tunnis' : '€/kuus'}</p>
                     </div>
                 </div>
               </div>
               <div className="w-full max-w-[1107px]">
-              <div className="flex justify-end pr-4 mr-15 self-end mt-3.5 text-base text-blue-900">
+              <div className="flex justify-end pr-2 mr-15 self-end mt-2 text-base text-blue-900">
                 *täpne hind kujuneb personaalse<br />kokkuleppe alusel
               </div>
               </div>
@@ -230,7 +231,7 @@ function Contactform() {
                 </div>
                 </div>
                 <div className="flex flex-col items-center pb-5">
-                  <button className="btn btn-warning bg-[#E3C10C] w-80">Saada päring</button>
+                  <button className="btn btn-warning bg-[#E3C10C] w-80">SAADA PÄRING</button>
                 </div>
               </div>
             </div>

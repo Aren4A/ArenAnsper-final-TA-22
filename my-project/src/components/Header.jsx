@@ -6,10 +6,10 @@ import backgroundImage from '../assets/cropped_ananass.jpg';
 function Header() {
   return (
     <div className="bg-cover bg-center w-full" style={{ backgroundImage: `url(${backgroundImage})` }}>
-      <header className='flex justify-end p-5 lg:flex hidden'>
-        <a href="#visioon" className="text-[#E3C10C] mr-7 text-3xl">Visioon</a>
-        <a href="#hind" className="text-[#E3C10C] mr-7 text-3xl">Hind</a>
-        <a href="#kontakt" className="text-[#E3C10C] mr-5 text-3xl">Kontakt</a>
+      <header className='flex justify-end p-5 lg:flex hidden bg-slate-600 bg-opacity-50'>
+        <a href="#visioon" className="text-[#E3C10C] mr-7 text-2xl font-semibold">VISIOON</a>
+        <a href="#hind" className="text-[#E3C10C] mr-7 text-2xl font-semibold">HIND</a>
+        <a href="#kontakt" className="text-[#E3C10C] mr-5 text-2xl font-semibold">KONTAKT</a>
       </header>
       <div className='flex flex-col justify-center'>
         <h1 className='dancing-script lg:pl-20 text-[#E3C10C] [font-size:_clamp(4em,3vw,10em)] px-3 leading-[60px]'>Raamatupidamine mikro- ja <br />väikeettevõtetele</h1>
