@@ -12,7 +12,7 @@ function Header() {
         <a href="#kontakt" className="text-[#E3C10C] mr-5 text-2xl font-semibold">KONTAKT</a>
       </header>
       <div className='flex flex-col justify-center'>
-        <h1 className='dancing-script lg:pl-20 text-[#E3C10C] [font-size:_clamp(4em,3vw,10em)] px-3 leading-[60px]'>Raamatupidamine mikro- ja <br />väikeettevõtetele</h1>
+        <h1 className='drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.6)] dancing-script lg:pl-20 text-[#E3C10C] [font-size:_clamp(4em,3vw,10em)] px-3 leading-[60px]'>Raamatupidamine mikro- ja <br />väikeettevõtetele</h1>
         <h1 className='text-black lg:pl-20 text-lg pr-[45%] pl-3 pt-3'>“If you think it's expensive to hire a professional to do the job, wait until you hire an amateur.”</h1>
         <h1 className='text-black lg:pl-20 text-lg pr-[45%] pl-3 pt-3'>-Red Adair</h1>
       </div>
