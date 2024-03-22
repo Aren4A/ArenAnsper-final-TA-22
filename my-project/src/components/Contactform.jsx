@@ -3,9 +3,20 @@ import emailjs from '@emailjs/browser';
 import { infoboxes } from "../utils/infoboxes";
 import { services } from "../utils/services";
 import { Link } from 'react-router-dom';
+import '../App.css';
+import { useTranslation } from "react-i18next";
 
 
 function Contactform() {
+  const { t, i18n: {changeLanguage, language} } = useTranslation();
+ const [currentLanguage, setCurrentLanguage] = useState(language)
+ const handleChangeLanguage = () => {
+   const newLanguage = currentLanguage === "et" ? "en" : "et";
+   setCurrentLanguage(newLanguage);
+   changeLanguage(newLanguage);
+ }
+ {currentLanguage}
+  
     const [total, setTotal] = useState(0);
     const [selectedServices, setSelectedServices] = useState({});
     const [hourlyAccounting, setHourlyAccounting] = useState(false); // New state for the "Soovin tunnipõhist raamatupidamist" checkbox
@@ -107,7 +118,7 @@ function Contactform() {
             ))}
             <div className="flex flex-col items-start lg:px-20 px-4 pt-20 pb-1.5 text-[#E6E5E0]">
             <div id="hind" className="text-lg lg:text-2xl text-blue-900 max-md:max-w-full font-bold">
-            Vali tunnipõhine arvestus või pane ise pakett kokku:
+            {t('AccountingTitle', { appName: "App" })}
             </div>
 
               <div className="flex flex-col pl-1 lg:pl-0 gap-5 justify-between mt-2 w-full max-w-[1107px]">
@@ -121,7 +132,7 @@ function Contactform() {
                         className="bg-base-100 checkbox checkbox-warning mt-1.5"
                         onChange={(e) => handleCheck(e.target.checked, { label: 'soovin tunnipõhist raamatupidamist', price: 50 })}
                         disabled={checkedState.some(checked => checked)}                    />
-                    <label for="hourly-accounting-checkbox">Soovin tunnipõhist raamatupidamist</label>
+                    <label for="hourly-accounting-checkbox">{t('HourlyAccounting', { appName: "App" })}</label>
                   </div>
                 </div>
               <ul>
