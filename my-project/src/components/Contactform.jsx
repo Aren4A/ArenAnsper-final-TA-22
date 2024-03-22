@@ -106,14 +106,14 @@ function Contactform() {
                 <input type="hidden" name={`service-${index}`} />
             ))}
             <div className="flex flex-col items-start lg:px-20 px-4 pt-20 pb-1.5 text-[#E6E5E0]">
-            <div id="hind" className="text-lg lg:text-3xl text-blue-900 max-md:max-w-full font-bold">
+            <div id="hind" className="text-lg lg:text-2xl text-blue-900 max-md:max-w-full font-bold">
             Vali tunnipõhine arvestus või pane ise pakett kokku:
             </div>
 
               <div className="flex flex-col pl-1 lg:pl-0 gap-5 justify-between mt-2 w-full max-w-[1107px]">
 
               <div className="flex gap-1.5 my-auto text-2xl text-blue-900">
-                  <div className="flex gap-4 items-center lg:text-3xl text-xl">
+                  <div className="flex gap-4 items-center lg:text-2xl text-xl">
                   <input 
                         id="hourly-accounting-checkbox" 
                         name="hourly-accounting" 
@@ -129,7 +129,7 @@ function Contactform() {
             {services.map(({ name}, index) => {
           return (
             <li key={index}>
-              <div className="flex gap-4 py-2 lg:text-3xl text-xl text-blue-900 lg:w-[700px]">
+              <div className="flex gap-4 py-2 lg:text-2xl text-xl text-blue-900 lg:w-[700px]">
                 <div className="flex items-center gap-4">
                   <input
                     type="checkbox"
