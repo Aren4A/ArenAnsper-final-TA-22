@@ -3,7 +3,7 @@ import React from 'react';
 
 function Footer() {
     return (
-        <div class="flex justify-center items-center py-20 text-xl lg:text-3xl font-medium text-center text-blue-900 bg-yellow-500" id='kontakt'>
+        <div class="flex justify-center items-center py-20 text-xl lg:text-3xl font-medium text-center text-[#012579] bg-[#E3C10C]" id='kontakt'>
   <div class="flex flex-col items-center w-full leading-[60px]">
     <img src="/LogoMakr.png"
       class="max-w-full aspect-[0.77] w-[138px]"

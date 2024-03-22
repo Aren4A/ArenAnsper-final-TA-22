@@ -15,7 +15,6 @@ function App() {
         <Contactform />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/visioon" element={<About />} />
         </Routes>
         <Footer />
       </div>
