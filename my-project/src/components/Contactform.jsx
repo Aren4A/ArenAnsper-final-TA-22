@@ -137,7 +137,7 @@ function Contactform() {
             
               </ul>
               <div className="flex gap-1.5 my-auto text-2xl text-blue-900">
-                  <div className="flex align-middle sm:text-2xl text-sm">
+                  <div className="flex items-center sm:text-2xl text-sm">
                   <input 
                         id="hourly-accounting-checkbox" 
                         name="hourly-accounting" 
@@ -145,7 +145,7 @@ function Contactform() {
                         className="checkbox checkbox-warning mt-1.5"
                         onChange={(e) => handleCheck(e.target.checked, { label: 'soovin tunnipõhist raamatupidamist', price: 50 })}
                         disabled={checkedState.some(checked => checked)}                    />
-                    <label for="hourly-accounting-checkbox" className="ms-3 flex-auto">Soovin tunnipõhist raamatupidamist</label>
+                    <label for="hourly-accounting-checkbox" className="flex ms-2">Soovin tunnipõhist raamatupidamist</label>
                   </div>
                 </div>
 
@@ -175,7 +175,8 @@ function Contactform() {
                 <div className="flex flex-col">
                 <div className="flex flex-col mb-3">
                 <label className="form-label">Eesnimi</label>
-                <input name="user_name" type="text" className="input input-bordered w-full lg:max-w-xs dark:bg-white" required />
+                <input name="user_name" type="text" className="input input-bordered w-full lg:max-w-xs dark:bg-white" required onInvalid={e => e.target.setCustomValidity("Kohustuslik väli!")}
+    onInput={e => e.target.setCustomValidity("")}/>
                 </div>
                 <div className="flex flex-col mb-3">
                 <label className="form-label">Perekonnanimi</label>
