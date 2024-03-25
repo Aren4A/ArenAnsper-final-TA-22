@@ -10,6 +10,16 @@
       "AccountingTitle":"Vali tunnipõhine arvestus või pane ise pakett kokku:",
       "choice1":"Palgaarvestus 1 töötaja",
       "choice2":"Palgaarvestus 2-10 töötajat",
-      "choice3":"Kolmas valik"
+      "choice3":"Ostuarved kuni 10tk/kuus (EE)",
+      "choice4":"Ostuarved 10-50 tk kuus (EE)",
+      "choice5":"Müügiarved 1 - 5 tk/kuus",
+      "choice6":"Müügiarved 6 - 15 tk",
+      "choice7":"Käibedeklaratsiooni esitamine",
+      "choice8":"TSD esitamine",
+      "choice9":"Majandusaasta ülevaatus koos aruande esitamisega RIK-ile (mikroettevōte)",
+      "choice10":"Majandusaasta aruande esitamine RIK-ile",
+      "choice11":"Ostuarved EU, USA, GBP kuni 5 tk",
+      "choice12":"Dividendide deklareerimine",
+      "choice13":"Üksikute kannetega abistamine (sōiduauto kompensatsioon, osakapitali sissemaksmine jne)"
     }
   }

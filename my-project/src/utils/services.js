@@ -15,53 +15,53 @@ export const services = [
     disabled: false
   },
   {
-    name: 'choice1',
+    name: 'choice4',
     price: 50,
     disabled: false
   },
   {
-    name: 'choice1',
+    name: 'choice5',
     price: 25,
     disabled: false
   },
   {
-    name: 'choice1',
+    name: 'choice6',
     price: 40,
     disabled: false
   },
   //
     {
-      name: 'choice1',
+      name: 'choice7',
       price: 25,
       disabled: false
     },
     {
-      name: 'choice1',
+      name: 'choice8',
       price: 25,
       disabled: false
     },
     {
-      name: 'choice1',
+      name: 'choice9',
       price: 200,
       disabled: false
     },
     {
-      name: 'choice1',
+      name: 'choice10',
       price: 100,
       disabled: false
     },
     {
-      name: 'choice1',
+      name: 'choice11',
       price: 30,
       disabled: false
     },
     {
-      name: 'choice1',
+      name: 'choice12',
       price: 30,
       disabled: false
     },
     {
-      name: 'choice1',
+      name: 'choice13',
       price: 25,
       disabled: false
     }
