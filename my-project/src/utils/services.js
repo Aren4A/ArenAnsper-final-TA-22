@@ -1,67 +1,67 @@
 export const services = [
   {
-    name: "Palgaarvestus 1 töötaja",
+    name: 'choice1',
     price: 30,
     disabled: false
   },
   {
-    name: "Palgaarvestus 2-10 töötajat",
+    name: 'choice2',
     price: 55,
     disabled: false
   },
   {
-    name: "Ostuarved kuni 10tk/kuus (EE)",
+    name: 'choice3',
     price: 25,
     disabled: false
   },
   {
-    name: "Ostuarved 10-50 tk kuus (EE)",
+    name: 'choice1',
     price: 50,
     disabled: false
   },
   {
-    name: "Müügiarved 1 -  5 tk/kuus",
+    name: 'choice1',
     price: 25,
     disabled: false
   },
   {
-    name: "Müügiarved 6 - 15 tk",
+    name: 'choice1',
     price: 40,
     disabled: false
   },
   //
     {
-      name: "Käibedeklaratsiooni esitamine",
+      name: 'choice1',
       price: 25,
       disabled: false
     },
     {
-      name: "TSD esitamine",
+      name: 'choice1',
       price: 25,
       disabled: false
     },
     {
-      name: "Majandusaasta ülevaatus koos aruande esitamisega RIK-ile (mikroettevōte)",
+      name: 'choice1',
       price: 200,
       disabled: false
     },
     {
-      name: "Majandusaasta aruande esitamine RIK-ile",
+      name: 'choice1',
       price: 100,
       disabled: false
     },
     {
-      name: "Ostuarved EU, USA, GBP kuni 5 tk",
+      name: 'choice1',
       price: 30,
       disabled: false
     },
     {
-      name: "Dividendide deklareerimine",
+      name: 'choice1',
       price: 30,
       disabled: false
     },
     {
-      name: "Üksikute kannetega abistamine (sōiduauto kompensatsioon, osakapitali sissemaksmine jne)",
+      name: 'choice1',
       price: 25,
       disabled: false
     }

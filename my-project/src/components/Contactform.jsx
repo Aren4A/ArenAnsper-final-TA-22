@@ -151,7 +151,7 @@ function Contactform() {
                     onChange={() => handleOnChange(index)}
                     disabled={hourlyAccounting}
                   />
-                  <label htmlFor={`custom-checkbox-${index}`}>{name}</label>
+                  <label htmlFor={`custom-checkbox-${index}`}>{t(name, { appName: "App" })}</label>
                 </div>
               </div>
             </li>
