@@ -167,13 +167,14 @@ function Contactform() {
                     <div className="bg-[#E3C10C] px-2 py-1 text-3xl text-black max-md:px-5 w-40 input max-w-xs">{total}</div>
                     </div>
                     <div className="flex w-20 grow my-auto text-2xl text-blue-900">
-                        <p> {hourlyAccounting ? '€/tunnis' : '€/kuus'}</p>
+                        <div> {hourlyAccounting ? t('InHour') : t('InMonth')}</div>
                     </div>
                 </div>
+                
               </div>
               <div className="w-full max-w-[1107px]">
               <div className="flex justify-end pr-2 mr-15 self-end mt-2 text-base text-blue-900">
-                *täpne hind kujuneb personaalse<br />kokkuleppe alusel
+              {t('PrecisePrice1', { appName: "App" })}<br />{t('PrecisePrice2', { appName: "App" })}
               </div>
               </div>
             </div>
@@ -186,26 +187,26 @@ function Contactform() {
                   <div className="flex flex-col lg:flex-row">
                 <div className="flex flex-col">
                 <div className="flex flex-col mb-3">
-                <label className="form-label">Eesnimi</label>
+                <label className="form-label">{t('FirstName', { appName: "App" })}</label>
                 <input name="user_name" type="text" className="input input-bordered w-full lg:max-w-xs dark:bg-white" required onInvalid={e => e.target.setCustomValidity("Kohustuslik väli!")}
     onInput={e => e.target.setCustomValidity("")}/>
                 </div>
                 <div className="flex flex-col mb-3">
-                <label className="form-label">Perekonnanimi</label>
+                <label className="form-label">{t('LastName', { appName: "App" })}</label>
                 <input name="last_name" type="text" className="input input-bordered w-full lg:max-w-xs dark:bg-white" required />
                 </div>
                 <div className="flex flex-col mb-3">
-                <label className="form-label">Ettevõtte nimi</label>
+                <label className="form-label">{t('Company', { appName: "App" })}</label>
                 <input name="company_name" type="text" className="input input-bordered w-full lg:max-w-xs dark:bg-white" required />
                 </div>
 
                 <div className="flex flex-col mb-3">
-                <label className="form-label">Email</label>
+                <label className="form-label">{t('Email', { appName: "App" })}</label>
                 <input name="user_email" type="email" className="input input-bordered w-full lg:max-w-xs dark:bg-white" required />
                 </div>
 
                 <div className="flex flex-col mb-3">
-                <label className="form-label">Telefon</label>
+                <label className="form-label">{t('Phone', { appName: "App" })}</label>
                 <input name="phone" type="tel" className="input input-bordered w-full lg:max-w-xs dark:bg-white" required />
                 </div>
                 </div>
@@ -225,7 +226,7 @@ function Contactform() {
                     checked={acheckedState[index]}
                     onChange={() => ahandleOnChange(index)}
                   />
-                  <label htmlFor={`custom-checkbox-${index}`}> {name}</label>
+                  <label htmlFor={`custom-checkbox-${index}`}>{t(name, { appName: "App" })}</label>
                 </div>
             </li>
           );
@@ -236,13 +237,13 @@ function Contactform() {
                     
 
                              
-                <label className="form-label">Lisainfo</label>              
+                <label className="form-label">{t('ExtraInfo', { appName: "App" })}</label>              
                 <textarea name="message" className="textarea textarea-bordered w-full dark:bg-white" rows="8" required></textarea>
                 </div>
                 </div>
                 </div>
                 <div className="flex flex-col items-center pb-5">
-                  <button className="text-xl lg:text-2xl btn btn-warning bg-[#E3C10C] w-[300px] lg:w-[350px]">SAADA PÄRING</button>
+                  <button className="text-xl lg:text-2xl btn btn-warning bg-[#E3C10C] w-[300px] lg:w-[350px]">{t('Submit', { appName: "App" })}</button>
                 </div>
               </div>
             </div>

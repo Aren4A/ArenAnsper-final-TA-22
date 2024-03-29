@@ -20,6 +20,22 @@
       "choice10":"Majandusaasta aruande esitamine RIK-ile",
       "choice11":"Ostuarved EU, USA, GBP kuni 5 tk",
       "choice12":"Dividendide deklareerimine",
-      "choice13":"Üksikute kannetega abistamine (sōiduauto kompensatsioon, osakapitali sissemaksmine jne)"
+      "choice13":"Üksikute kannetega abistamine (sōiduauto kompensatsioon, osakapitali sissemaksmine jne)",
+      "InHour":"€/tunnis",
+      "InMonth":"€/kuus",
+      "PrecisePrice1":"*täpne hind kujuneb personaalse",
+      "PrecisePrice2":"kokkuleppe alusel",
+      "FirstName":"Eesnimi",
+      "LastName":"Perekonnanimi",
+      "Company":"Ettevõtte nimi",
+      "Email":"Email",
+      "Phone":"Telefon",
+      "cbox1":"Olen käibemaksukohustuslane",
+      "cbox2":"Olen alustav mikroettevõte ja vajan abi raamatupidamise sisseseadmisel",
+      "cbox3":"Olen tegutsev väikeettevõte",
+      "ExtraInfo":"Lisainfo",
+      "Submit":"SAADA PÄRING",
+      "RCode":"Registrikood",
+      "Rights":"Kõik õigused kaitstud Kamur Finance OÜ 2024 ©"
     }
   }
