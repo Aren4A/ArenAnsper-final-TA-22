@@ -213,7 +213,7 @@ function Contactform() {
                  <div className="flex flex-col gap-4">
 
       <ul className="flex flex-col gap-4">
-        {infoboxes.map(({ name }, index) => {
+        {infoboxes.map(({ name, link }, index) => {
           return (
             <li key={index}>
                 <div className="flex gap-2">
@@ -226,7 +226,7 @@ function Contactform() {
                     checked={acheckedState[index]}
                     onChange={() => ahandleOnChange(index)}
                   />
-                  <label htmlFor={`custom-checkbox-${index}`}>{t(name, { appName: "App" })}</label>
+                  <label htmlFor={`custom-checkbox-${index}`}><a href={t(link, { appName: "App" })}>{t(name, { appName: "App" })}</a></label>
                 </div>
             </li>
           );
