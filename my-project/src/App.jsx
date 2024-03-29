@@ -9,6 +9,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import backgroundImage from './assets/cropped_ananass.jpg';
 
+
 function App() {
   const { t, i18n: {changeLanguage, language} } = useTranslation();
  const [currentLanguage, setCurrentLanguage] = useState(language)
@@ -16,20 +17,20 @@ function App() {
    const newLanguage = currentLanguage === "et" ? "en" : "et";
    setCurrentLanguage(newLanguage);
    changeLanguage(newLanguage);
+
+   const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+    setCurrentLanguageFlag(LanguageFlags[lng]);
+  };
  }
   return (
     <Router>
       <div className="App">
      <div className="bg-cover bg-center w-full" style={{ backgroundImage: `url(${backgroundImage})` }}>
       <header className='flex justify-end p-5 lg:flex hidden bg-slate-600 bg-opacity-50'>
-      <h3><button 
-        className="text-2xl pr-4"
-        type="button" 
-        onClick={handleChangeLanguage}
-     >
-  {currentLanguage}
-       
-     </button>
+      <h3 className='flex gap-4 pr-4'>
+      <button onClick={() => changeLanguage('et')}>EST</button>
+      <button onClick={() => changeLanguage('en')}>ENG</button>
      </h3>
         <a href="#visioon" className="text-[#E3C10C] mr-7 text-2xl font-semibold">{t('headerVisioon', { appName: "App" })}</a>
         <a href="#hind" className="text-[#E3C10C] mr-7 text-2xl font-semibold">{t('headerHind', { appName: "App" })}</a>
