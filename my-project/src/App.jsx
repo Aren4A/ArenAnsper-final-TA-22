@@ -27,7 +27,7 @@ function App() {
      <div className="bg-cover bg-center w-full" style={{ backgroundImage: `url(${backgroundImage})` }}>
       <header className='flex justify-end p-5 lg:flex bg-slate-600 bg-opacity-50'>
       <h3 className='flex gap-4 pr-4'>
-      <button onClick={() => changeLanguage('et')}><img src="src/assets/flag_est.png" alt="EST Flag" /></button>
+      <button onClick={() => changeLanguage('et')}><img src="/my-project/src/assets/flag_est.png" alt="EST Flag" /></button>
       <button onClick={() => changeLanguage('en')}><img src="src/assets/flag_uk.png" alt="UK Flag" /></button>
      </h3>
         <a href="#visioon" className="lg:flex hidden text-[#E3C10C] mr-7 text-2xl font-semibold">{t('headerVisioon', { appName: "App" })}</a>
