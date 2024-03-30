@@ -37,6 +37,8 @@
       "Submit":"SUBMIT",
       "RCode":"Registry code",
       "Rights":"All rights protected Kamur Finance OÜ 2024 ©",
-      "Link":"https://abiinfo.rik.ee/en/e-financials/settings/vat-registrations"
+      "Link1":"https://www.emta.ee/en/business-client/taxes-and-payment/value-added-tax/registration-vat-payer",
+      "Link2":"https://www.emta.ee/ariklient/registreerimine-ettevotlus/ettevotjale/alustavale-ettevotjale",
+      "Link3":"https://www.emta.ee/en/business-client/taxes-and-payment/value-added-tax/registration-vat-payer"
     }
   }

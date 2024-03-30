@@ -226,7 +226,7 @@ function Contactform() {
                     checked={acheckedState[index]}
                     onChange={() => ahandleOnChange(index)}
                   />
-                  <label htmlFor={`custom-checkbox-${index}`}><a href={t(link, { appName: "App" })}>{t(name, { appName: "App" })}</a></label>
+                  <label htmlFor={`custom-checkbox-${index}`}><a href={t(link, { appName: "App" })} className="hover:text-blue-500 hover:underline">{t(name, { appName: "App" })}</a></label>
                 </div>
             </li>
           );
