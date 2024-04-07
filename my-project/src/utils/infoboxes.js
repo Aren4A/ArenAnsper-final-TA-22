@@ -1,14 +1,14 @@
 export const infoboxes = [
   {
-    name: "cbox1",
+    name: "Olen käibemaksukohustuslane",
     link: "Link1",
   },
   {
-    name: "cbox2",
+    name: "Olen alustav mikroettevõte ja vajan abi raamatupidamise sisseseadmisel",
     link: "Link2",
   },
   {
-    name: "cbox3",
+    name: "Olen tegutsev väikeettevõte",
     link: "Link3",
   },
 ]

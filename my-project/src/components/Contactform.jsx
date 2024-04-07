@@ -91,10 +91,13 @@ function Contactform() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+    const apiService = import.meta.env.VITE_SERVICE_ID;
+    const apiTemplate = import.meta.env.VITE_TEMPLATE_ID;
+    const apiPublic = import.meta.env.VITE_PUBLIC_KEY;
+    
     emailjs
-      .sendForm('service_p5mxn2a', 'contact_form', form.current, {
-        publicKey: 'NuE1gTFl8K5yX9qCN',
+      .sendForm(`${apiService}`, `${apiTemplate}`, form.current, {
+        publicKey: `${apiPublic}`,
       })
       .then(
         () => {
