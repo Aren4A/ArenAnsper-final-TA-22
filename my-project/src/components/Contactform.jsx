@@ -123,7 +123,7 @@ function Contactform() {
             {t('AccountingTitle', { appName: "App" })}
             </div>
 
-              <div className="flex flex-col pl-1 lg:pl-0 gap-5 justify-between mt-2 w-full max-w-[1107px]">
+              <div className="flex flex-col pl-1 lg:pl-0 justify-between mt-2 w-full max-w-[1107px]">
 
               <div className="flex gap-1.5 my-auto text-2xl text-blue-900">
                   <div className="flex gap-4 items-center lg:text-2xl text-xl">
@@ -137,8 +137,8 @@ function Contactform() {
                     <label for="hourly-accounting-checkbox">{t('HourlyAccounting', { appName: "App" })}</label>
                   </div>
                 </div>
+                <div className="pt-2 text-lg lg:text-2xl text-blue-900 max-md:max-w-full font-bold">{t('OR', { appName: "App" })}</div>
               <ul>
-
             {services.map(({ name}, index) => {
           return (
             <li key={index}>
