@@ -195,21 +195,25 @@ function Contactform() {
                 </div>
                 <div className="flex flex-col mb-3">
                 <label className="form-label">{t('LastName', { appName: "App" })}</label>
-                <input name="last_name" type="text" className="input input-bordered w-full lg:max-w-xs dark:bg-white" required />
+                <input name="last_name" type="text" className="input input-bordered w-full lg:max-w-xs dark:bg-white" required onInvalid={e => e.target.setCustomValidity("Kohustuslik väli!")}
+    onInput={e => e.target.setCustomValidity("")}/>
                 </div>
                 <div className="flex flex-col mb-3">
                 <label className="form-label">{t('Company', { appName: "App" })}</label>
-                <input name="company_name" type="text" className="input input-bordered w-full lg:max-w-xs dark:bg-white" required />
+                <input name="company_name" type="text" className="input input-bordered w-full lg:max-w-xs dark:bg-white" required onInvalid={e => e.target.setCustomValidity("Kohustuslik väli!")}
+    onInput={e => e.target.setCustomValidity("")}/>
                 </div>
 
                 <div className="flex flex-col mb-3">
                 <label className="form-label">{t('Email', { appName: "App" })}</label>
-                <input name="user_email" type="email" className="input input-bordered w-full lg:max-w-xs dark:bg-white" required />
+                <input name="user_email" type="email" className="input input-bordered w-full lg:max-w-xs dark:bg-white" required onInvalid={e => e.target.setCustomValidity("Kohustuslik väli!")}
+    onInput={e => e.target.setCustomValidity("")}/>
                 </div>
 
                 <div className="flex flex-col mb-3">
                 <label className="form-label">{t('Phone', { appName: "App" })}</label>
-                <input name="phone" type="tel" className="input input-bordered w-full lg:max-w-xs dark:bg-white" required />
+                <input name="phone" type="number" className="[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none input input-bordered w-full lg:max-w-xs dark:bg-white" required onInvalid={e => e.target.setCustomValidity("Kohustuslik väli!")}
+    onInput={e => e.target.setCustomValidity("")}/>
                 </div>
                 </div>
                  <div className="flex flex-col gap-4">
@@ -235,12 +239,11 @@ function Contactform() {
         })}
       </ul>
 
-
-                    
-
+     
                              
                 <label className="form-label">{t('ExtraInfo', { appName: "App" })}</label>              
-                <textarea name="message" className="textarea textarea-bordered w-full dark:bg-white" rows="8" required></textarea>
+                <textarea name="message" className="textarea textarea-bordered w-full dark:bg-white" rows="8" required onInvalid={e => e.target.setCustomValidity("Kohustuslik väli!")}
+    onInput={e => e.target.setCustomValidity("")}></textarea>
                 </div>
                 </div>
                 </div>
