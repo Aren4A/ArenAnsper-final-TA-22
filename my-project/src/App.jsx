@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import backgroundImage from './assets/cropped_ananass.jpg';
+import { Analytics } from '@vercel/analytics/react';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+      <Analytics />
      <div className="bg-cover bg-center w-full" style={{ backgroundImage: `url(${backgroundImage})` }}>
       <header className='flex justify-end p-5 lg:flex bg-slate-600 bg-opacity-50'>
       <h3 className='flex gap-4 pr-4'>
