@@ -174,9 +174,10 @@ function Contactform() {
                 </div>
                 
               </div>
-              <div className="w-full max-w-[1107px]">
+              <div className="w-full max-w-[1235px]">
               <div className="flex justify-end pr-2 mr-15 self-end mt-2 text-base text-blue-900">
-              {t('PrecisePrice1', { appName: "App" })}<br />{t('PrecisePrice2', { appName: "App" })}
+              {t('PrecisePrice1', { appName: "App" })}<br />{t('PrecisePrice2', { appName: "App" })}<br />
+              {t('EiOleKaibekas', { appName: "App" })}
               </div>
               </div>
             </div>
