@@ -18,7 +18,7 @@ function Contactform() {
   
     const [total, setTotal] = useState(0);
     const [selectedServices, setSelectedServices] = useState({});
-    const [hourlyAccounting, setHourlyAccounting] = useState(false); // New state for the "Soovin tunnipõhist raamatupidamist" checkbox
+    const [hourlyAccounting, setHourlyAccounting] = useState(false);
     
     const [acheckedState, asetCheckedState] = useState(
       new Array(infoboxes.length).fill(false)
@@ -30,7 +30,7 @@ function Contactform() {
     
   
   
-    const ahandleOnChange = (position) => {
+    const infoHandleOnChange = (position) => {
       const updatedCheckedState = acheckedState.map((item, index) =>
         index === position ? !item : item
       );
@@ -137,7 +137,11 @@ function Contactform() {
                     <label for="hourly-accounting-checkbox">{t('HourlyAccounting', { appName: "App" })}</label>
                   </div>
                 </div>
-                <div className="pt-2 text-lg lg:text-2xl text-blue-900 max-md:max-w-full font-bold">{t('OR', { appName: "App" })}</div>
+
+      <div className="pt-2 text-lg lg:text-2xl text-blue-900 max-md:max-w-full font-bold">
+        {t('OR', { appName: "App" })}
+        </div>
+              
               <ul>
             {services.map(({ name}, index) => {
           return (
@@ -231,7 +235,7 @@ function Contactform() {
                     value={name}
                     className="checkbox checkbox-warning"
                     checked={acheckedState[index]}
-                    onChange={() => ahandleOnChange(index)}
+                    onChange={() => infoHandleOnChange(index)}
                   />
                   <label htmlFor={`custom-checkbox-${index}`}><a href={t(link, { appName: "App" })} className="hover:text-blue-500 hover:underline">{t(name, { appName: "App" })}</a></label>
                 </div>
