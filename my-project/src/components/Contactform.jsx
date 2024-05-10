@@ -7,46 +7,44 @@ import { useTranslation } from "react-i18next";
 
 
 function Contactform() {
-  const { t, i18n: {changeLanguage, language} } = useTranslation();
- const [currentLanguage, setCurrentLanguage] = useState(language)
- const handleChangeLanguage = () => {
+//react-i18next
+const { t, i18n: {changeLanguage, language} } = useTranslation();
+const [currentLanguage, setCurrentLanguage] = useState(language)
+const handleChangeLanguage = () => {
    const newLanguage = currentLanguage === "et" ? "en" : "et";
    setCurrentLanguage(newLanguage);
    changeLanguage(newLanguage);
  }
  {currentLanguage}
-  
-    const [total, setTotal] = useState(0);
-    const [selectedServices, setSelectedServices] = useState({});
-    const [hourlyAccounting, setHourlyAccounting] = useState(false);
-    
-    const [acheckedState, asetCheckedState] = useState(
+//Kokku algseis
+const [total, setTotal] = useState(0);
+//Valitud teenused
+const [selectedServices, setSelectedServices] = useState({});
+//Tunnipõhine raamatupidamine
+const [hourlyAccounting, setHourlyAccounting] = useState(false);
+//Info väärtused infoboxes.js-st
+const [infocheckedState, infoSetCheckedState] = useState(
       new Array(infoboxes.length).fill(false)
     );
-
-    const [checkedState, setCheckedState] = useState(
+//Teenuste väärtused services.js-st
+const [checkedState, setCheckedState] = useState(
       new Array(services.length).fill(false)
-    );
-    
-  
-  
-    const infoHandleOnChange = (position) => {
-      const updatedCheckedState = acheckedState.map((item, index) =>
+);
+//Info märkeruutude haldamine
+const infoHandleOnChange = (position) => {
+      const updatedCheckedState = infocheckedState.map((item, index) =>
         index === position ? !item : item
       );
-  
-      asetCheckedState(updatedCheckedState);
+      infoSetCheckedState(updatedCheckedState);
     };
-
-
-  const handleOnChange = (position) => {
+//Teenuste märkeruutude haldamine    
+const handleOnChange = (position) => {
     const updatedCheckedState = checkedState.map((item, index) =>
       index === position ? !item : item
     );
-
-    setCheckedState(updatedCheckedState);
+      setCheckedState(updatedCheckedState);
     
-    const totalPrice = updatedCheckedState.reduce(
+const totalPrice = updatedCheckedState.reduce(
       (sum, currentState, index) => {
         if (currentState === true) {
           return sum + services[index].price;
@@ -55,29 +53,23 @@ function Contactform() {
       },
       0
     );
-
-
     setTotal(totalPrice);
   };
-    
-
-    const handleCheck = (isChecked, service) => {
+//Tunnipõhise ja teenuste märkeruutude hindade loogika
+const handleCheck = (isChecked, service) => {
         if (service.label === 'soovin tunnipõhist raamatupidamist') {
             setHourlyAccounting(isChecked);
             if (isChecked) {
-                // Reset selectedServices to only include 'soovin tunnipõhist raamatupidamist'
+                // Määra tunnipõhise hind
                 setSelectedServices({ 'soovin tunnipõhist raamatupidamist': 50 });
-                // Reset total to the price of 'soovin tunnipõhist raamatupidamist'
                 setTotal(50);
             } else {
-                // Remove 'soovin tunnipõhist raamatupidamist' from selectedServices
+                // Eemalda tunnipõhise hind
                 setSelectedServices({});
-                // Reset total to 0
                 setTotal(0);
             }
         } else {
         let newTotal = total;
-        
         setSelectedServices(prevServices => ({
           ...prevServices,
           [service.label]: isChecked ? service.price : 0
@@ -86,10 +78,9 @@ function Contactform() {
 
         }
     };
-    //
-    const form = useRef();
-
-  const sendEmail = (e) => {
+//Kontaktvorm
+const form = useRef();
+const sendEmail = (e) => {
     e.preventDefault();
     const apiService = import.meta.env.VITE_SERVICE_ID;
     const apiTemplate = import.meta.env.VITE_TEMPLATE_ID;
@@ -234,7 +225,7 @@ function Contactform() {
                     name={`custom-checkbox-${index}`}
                     value={name}
                     className="checkbox checkbox-warning"
-                    checked={acheckedState[index]}
+                    checked={infocheckedState[index]}
                     onChange={() => infoHandleOnChange(index)}
                   />
                   <label htmlFor={`custom-checkbox-${index}`}><a href={t(link, { appName: "App" })} className="hover:text-blue-500 hover:underline">{t(name, { appName: "App" })}</a></label>
