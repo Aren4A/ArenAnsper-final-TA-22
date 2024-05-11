@@ -24,7 +24,14 @@ function Header() {
       <button onClick={() => changeLanguage('et')}><img src="/flag_est.png" alt="EST Flag" /></button>
       <button onClick={() => changeLanguage('en')}><img src="/flag_uk.png" alt="UK Flag" /></button>
      </h3>
-        <Link to="/extra" className="lg:flex hidden text-[#E3C10C] mr-7 text-2xl font-semibold">{t('headerExtra', { appName: "App" })}</Link>
+     
+     <div className="dropdown dropdown-end w-24">
+        <div tabIndex={0} role="button" className="lg:flex hidden text-[#E3C10C] mr-7 text-2xl font-semibold">{t('Links', { appName: "App" })}</div>
+        <ul tabIndex={0} className="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4">
+          <li><a><Link to="/extra" className="text-black">{t('headerExtraLinks', { appName: "App" })}</Link></a></li>
+          <li><a><Link to="/extra" className="text-black">{t('headerWhatAccountant', { appName: "App" })}</Link></a></li>
+        </ul>
+      </div>
         <a href="#visioon" className="lg:flex hidden text-[#E3C10C] mr-7 text-2xl font-semibold">{t('headerVisioon', { appName: "App" })}</a>
         <a href="#hind" className="lg:flex hidden text-[#E3C10C] mr-7 text-2xl font-semibold">{t('headerHind', { appName: "App" })}</a>
         <a href="#kontakt" className="lg:flex hidden text-[#E3C10C] mr-5 text-2xl font-semibold">{t('headerKontakt', { appName: "App" })}</a>

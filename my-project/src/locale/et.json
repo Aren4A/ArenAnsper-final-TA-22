@@ -42,7 +42,9 @@
       "Link2":"https://www.emta.ee/ariklient/registreerimine-ettevotlus/ettevotjale/alustavale-ettevotjale",
       "Link3":"https://www.emta.ee/ariklient/registreerimine-ettevotlus/ettevotjale/alustavale-ettevotjale",
       "OR":"VÕI",
-      "headerExtra":"KASULIKUD LINGID",
-      "headerHome":"KOJU"
+      "headerExtraLinks":"KASULIKUD LINGID",
+      "headerWhatAccountant":"MILLIST RAAMATUPIDAJAT VAJAD?",
+      "headerHome":"KOJU",
+      "Links":"LINGID"
     }
   }

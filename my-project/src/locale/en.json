@@ -42,7 +42,9 @@
       "Link2":"https://www.emta.ee/ariklient/registreerimine-ettevotlus/ettevotjale/alustavale-ettevotjale",
       "Link3":"https://www.emta.ee/en/business-client/taxes-and-payment/value-added-tax/registration-vat-payer",
       "OR":"OR",
-      "headerExtra":"USEFUL LINKS",
-      "headerHome":"HOME"
+      "headerExtraLinks":"USEFUL LINKS",
+      "headerWhatAccountant":"WHAT KIND OF ACCOUNTANT YOU NEED?",
+      "headerHome":"HOME",
+      "Links":"LINKS"
     }
   }
