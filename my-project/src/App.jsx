@@ -6,8 +6,8 @@ import {
   Routes,
   Link
 } from "react-router-dom";
-import Extra from './extrainfo/Extra';
-import ErrorPage from './extrainfo/ErrorPage';
+import Extra from './components/Extra';
+import ErrorPage from './components/ErrorPage';
 import Header from './components/Header';
 import About from './components/About';
 import Contactform from './components/Contactform';
