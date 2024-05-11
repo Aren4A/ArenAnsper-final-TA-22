@@ -41,6 +41,8 @@
       "Link1":"https://www.emta.ee/ariklient/maksud-ja-tasumine/kaibemaks/kaibemaksukohustuslasena-registreerimine",
       "Link2":"https://www.emta.ee/ariklient/registreerimine-ettevotlus/ettevotjale/alustavale-ettevotjale",
       "Link3":"https://www.emta.ee/ariklient/registreerimine-ettevotlus/ettevotjale/alustavale-ettevotjale",
-      "OR":"VÕI"
+      "OR":"VÕI",
+      "headerExtra":"KASULIKUD LINGID",
+      "headerHome":"KOJU"
     }
   }
