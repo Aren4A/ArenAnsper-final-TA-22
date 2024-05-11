@@ -2,6 +2,7 @@ import React from 'react';
 import '../App.css';
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import backgroundImage from '../assets/cropped_ananass.jpg';
 
 function Header() {
@@ -23,7 +24,7 @@ function Header() {
       <button onClick={() => changeLanguage('et')}><img src="/flag_est.png" alt="EST Flag" /></button>
       <button onClick={() => changeLanguage('en')}><img src="/flag_uk.png" alt="UK Flag" /></button>
      </h3>
-        <a href="/extra" className="lg:flex hidden text-[#E3C10C] mr-7 text-2xl font-semibold">{t('headerExtra', { appName: "App" })}</a>
+        <Link to="/extra" className="lg:flex hidden text-[#E3C10C] mr-7 text-2xl font-semibold">{t('headerExtra', { appName: "App" })}</Link>
         <a href="#visioon" className="lg:flex hidden text-[#E3C10C] mr-7 text-2xl font-semibold">{t('headerVisioon', { appName: "App" })}</a>
         <a href="#hind" className="lg:flex hidden text-[#E3C10C] mr-7 text-2xl font-semibold">{t('headerHind', { appName: "App" })}</a>
         <a href="#kontakt" className="lg:flex hidden text-[#E3C10C] mr-5 text-2xl font-semibold">{t('headerKontakt', { appName: "App" })}</a>
