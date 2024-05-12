@@ -19,7 +19,7 @@ function Extra() {
  <div className="bg-cover bg-center w-full" >
       <header className='flex justify-between p-5 lg:flex bg-slate-600 bg-opacity-50'>
       <div>
-      <a href="/" className="lg:flex hidden text-[#E3C10C] mr-7 text-2xl font-semibold">{t('headerHome', { appName: "App" })}</a>
+      <a href="/" className="lg:flex text-[#E3C10C] mr-7 text-2xl font-semibold">{t('headerHome', { appName: "App" })}</a>
       </div>
       <div className="flex justify-end gap-4">
       <button onClick={() => changeLanguage('et')}><img src="/flag_est.png" alt="EST Flag" /></button>
