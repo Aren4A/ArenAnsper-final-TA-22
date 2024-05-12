@@ -25,7 +25,7 @@ function Header() {
       <button onClick={() => changeLanguage('en')}><img src="/flag_uk.png" alt="UK Flag" /></button>
      </h3>
      
-     <div className="dropdown dropdown-end w-24">
+     <div className="dropdown dropdown-end lg:w-24">
         <div tabIndex={0} role="button" className="lg:flex hidden text-[#E3C10C] mr-7 text-2xl font-semibold">{t('Links', { appName: "App" })}</div>
         <ul tabIndex={0} className="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4">
           <li><a><Link to="/extra" className="text-black">{t('headerExtraLinks', { appName: "App" })}</Link></a></li>
