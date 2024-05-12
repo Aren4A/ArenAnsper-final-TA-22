@@ -21,10 +21,10 @@ function Header() {
  <div className="bg-cover bg-center w-full" style={{ backgroundImage: `url(${backgroundImage})` }}>
       
       <header className="navbar lg:justify-end flex bg-slate-600 bg-opacity-50">
-  <div className="navbar-start">
+  <div className="lg:navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden justify-start">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-5 h-5 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
       </div>
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
         <li>
@@ -35,7 +35,7 @@ function Header() {
         </li>
       </ul>
     </div>
-    <div className="flex">
+    <div className="flex justify-end">
     <h3 className='flex lg:hidden gap-4 pr-4'>
       <button onClick={() => changeLanguage('et')}><img src="/flag_est.png" alt="EST Flag" /></button>
       <button onClick={() => changeLanguage('en')}><img src="/flag_uk.png" alt="UK Flag" /></button>
