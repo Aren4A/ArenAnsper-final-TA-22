@@ -9,6 +9,7 @@ import {
 import Extra from './components/Extra';
 import ErrorPage from './components/ErrorPage';
 import Success from './components/Success';
+import Accountant from './components/Accountant';
 import Header from './components/Header';
 import About from './components/About';
 import Contactform from './components/Contactform';
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
   {
     path: "/extra",
     element: <Extra />
+  },
+  {
+    path: "/accountant",
+    element: <Accountant />
   },
   {
     path: "/success",

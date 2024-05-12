@@ -29,7 +29,7 @@ function Header() {
         <div tabIndex={0} role="button" className="lg:flex hidden text-[#E3C10C] mr-7 text-2xl font-semibold">{t('Links', { appName: "App" })}</div>
         <ul tabIndex={0} className="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4">
           <li><a><Link to="/extra" className="text-black">{t('headerExtraLinks', { appName: "App" })}</Link></a></li>
-          <li><a><Link to="/extra" className="text-black">{t('headerWhatAccountant', { appName: "App" })}</Link></a></li>
+          <li><a><Link to="/accountant" className="text-black">{t('headerWhatAccountant', { appName: "App" })}</Link></a></li>
         </ul>
       </div>
         <a href="#visioon" className="lg:flex hidden text-[#E3C10C] mr-7 text-2xl font-semibold">{t('headerVisioon', { appName: "App" })}</a>
