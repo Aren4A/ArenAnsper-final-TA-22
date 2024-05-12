@@ -93,7 +93,7 @@ const sendEmail = (e) => {
       .then(
         () => {
           console.log('SUCCESS!');
-          window.location.href = "/";
+          window.location.href = "/success";
         },
         (error) => {
           console.log('FAILED...', error.text);

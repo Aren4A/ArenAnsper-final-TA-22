@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Extra from './components/Extra';
 import ErrorPage from './components/ErrorPage';
+import Success from './components/Success';
 import Header from './components/Header';
 import About from './components/About';
 import Contactform from './components/Contactform';
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
   {
     path: "/extra",
     element: <Extra />
+  },
+  {
+    path: "/success",
+    element: <Success />
   },
   {
     path: "*",

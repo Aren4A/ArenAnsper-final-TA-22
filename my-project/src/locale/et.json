@@ -45,6 +45,7 @@
       "headerExtraLinks":"KASULIKUD LINGID",
       "headerWhatAccountant":"MILLIST RAAMATUPIDAJAT VAJAD?",
       "headerHome":"KOJU",
-      "Links":"LINGID"
+      "Links":"LINGID",
+      "messageSentSuccessfully":"Sõnum edukalt saadetud!"
     }
   }
