@@ -46,6 +46,10 @@
       "headerWhatAccountant":"WHAT KIND OF ACCOUNTANT YOU NEED?",
       "headerHome":"HOME",
       "Links":"LINKS",
-      "messageSentSuccessfully":"Message sent successfully!"
+      "messageSentSuccessfully":"Message sent successfully!",
+      "WhyBecomeATaxResident":"1. Why become a tax resident in Estonia?",
+      "WhyBecomeATaxResidentLink":"https://www.emta.ee/en/business-client/registration-business/non-residents-e-residents/determining-residency",
+      "LetterOfResignation":"2. Letter of Resignation",
+      "LetterOfResignationLink":"https://lahkumisavaldus.ee/"
     }
   }

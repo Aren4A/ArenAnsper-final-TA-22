@@ -46,6 +46,10 @@
       "headerWhatAccountant":"MILLIST RAAMATUPIDAJAT VAJAD?",
       "headerHome":"KOJU",
       "Links":"LINGID",
-      "messageSentSuccessfully":"Sõnum edukalt saadetud!"
+      "messageSentSuccessfully":"Sõnum edukalt saadetud!",
+      "WhyBecomeATaxResident":"1. Millal hakata Eesti maksuresidendiks?",
+      "WhyBecomeATaxResidentLink":"https://www.emta.ee/ariklient/registreerimine-ettevotlus/mitteresidendile-e-residendile/residentsuse-maaramine",
+      "LetterOfResignation":"2. Lahkumisavaldus palgatööl",
+      "LetterOfResignationLink":"https://lahkumisavaldus.ee/"
     }
   }

@@ -53,8 +53,9 @@ function Extra() {
   <p className="text-base lg:text-lg">Nemad hoolitsevad selle eest, et asjad ei muutuks. Kliendid peavad kohanema nende töövõtetega. Nad on uhked, et ei käi ajaga kaasas, ei tunne ega kasuta uusi võimalusi. Nad räägivad rõõmuga ja pikalt, kuidas vanasti oli. Nemad on eriti lihtsalt asendatavad. Piisab, et sa lihtsalt ei vii enam talle koju füüsiliselt tšekke. Tema sulle järele ei tule, sest asjad lihtsalt nii ei käi. Tema ootab sinu kingakarpi enda hoovis. Ja jääbki ootama. Küll ta leiab kellegi teise, kellega vanast ajast edasi rääkida.</p>
   </div>
 </div>
-<h1 className='flex pt-4 pb-4 text-sm text-[#012579]'>
-Kui Sind kõnetab keegi, kes oleks seal kuskil vahepeal, siis kirjuta kamurmp@gmail.com. 
+<h1 className='flex flex-col lg:flex-row gap-1 pt-4 pb-2 text-sm text-[#012579]'>
+<p>Kui Sind kõnetab keegi, kes oleks seal kuskil vahepeal, siis kirjuta: </p>
+<p className="font-medium">kamurmp@gmail.com</p>. 
         </h1>
 </div>
       </div>

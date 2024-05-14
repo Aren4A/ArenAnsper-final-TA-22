@@ -30,15 +30,15 @@ function Extra() {
 
         <div className="flex h-fit border-2 rounded-xl border-black bg-[#E3C10C] text-[#012579]">
   <div className="flex flex-col px-2 pb-4 text-xl">
-  <h2 className="font-medium py-2">1. Millal hakata Eesti maksuresidendiks?</h2>
-  <a className="text-sm lg:text-lg" href="https://www.emta.ee/ariklient/registreerimine-ettevotlus/mitteresidendile-e-residendile/residentsuse-maaramine" >https://www.emta.ee/ariklient/registreerimine-ettevotlus/mitteresidendile-e-residendile/residentsuse-maaramine</a>
+  <h2 className="font-medium py-2">{t('WhyBecomeATaxResident', { appName: "App" })}</h2>
+  <a className="text-sm lg:text-lg" href={t('WhyBecomeATaxResidentLink', { appName: "App" })}>{t('WhyBecomeATaxResidentLink', { appName: "App" })}</a>
   </div>
 </div>
 
 <div className="flex h-fit border-2 rounded-xl border-black bg-[#E3C10C] text-[#012579]">
   <div className="flex flex-col px-2 pb-4 text-xl">
-  <h2 className="font-medium py-2">2. Lahkumisavaldus palgatööl</h2>
-  <a className="text-sm lg:text-lg" href="https://lahkumisavaldus.ee/" >https://lahkumisavaldus.ee/</a>
+  <h2 className="font-medium py-2">{t('LetterOfResignation', { appName: "App" })}</h2>
+  <a className="text-sm lg:text-lg" href={t('LetterOfResignationLink', { appName: "App" })} >{t('LetterOfResignationLink', { appName: "App" })}</a>
   </div>
 </div>
 
