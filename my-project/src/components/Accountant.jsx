@@ -55,7 +55,7 @@ function Extra() {
 </div>
 <h1 className='flex flex-col lg:flex-row gap-1 pt-4 pb-2 text-sm text-[#012579]'>
 <p>Kui Sind kõnetab keegi, kes oleks seal kuskil vahepeal, siis kirjuta: </p>
-<p className="font-medium">kamurmp@gmail.com</p>. 
+<p className="font-medium">kamurmp@gmail.com</p>
         </h1>
 </div>
       </div>
