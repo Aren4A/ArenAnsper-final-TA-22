@@ -26,26 +26,26 @@ function Extra() {
       <button onClick={() => changeLanguage('en')}><img src="/flag_uk.png" alt="UK Flag" /></button>
       </div>
       </header>
-      <div className="flex flex-col gap-2 p-8">
+      <div className="flex flex-col gap-2 p-6">
 
         <div className="flex h-fit border-2 rounded-xl border-black bg-[#E3C10C] text-[#012579]">
   <div className="flex flex-col px-2 pb-4 text-xl">
   <h2 className="font-medium py-2">1. Millal hakata Eesti maksuresidendiks?</h2>
-  <a className="text-sm lg:text-lg w-fit" href="https://www.emta.ee/ariklient/registreerimine-ettevotlus/mitteresidendile-e-residendile/residentsuse-maaramine" >https://www.emta.ee/ariklient/registreerimine-ettevotlus/mitteresidendile-e-residendile/residentsuse-maaramine</a>
+  <a className="text-sm lg:text-lg" href="https://www.emta.ee/ariklient/registreerimine-ettevotlus/mitteresidendile-e-residendile/residentsuse-maaramine" >https://www.emta.ee/ariklient/registreerimine-ettevotlus/mitteresidendile-e-residendile/residentsuse-maaramine</a>
   </div>
 </div>
 
 <div className="flex h-fit border-2 rounded-xl border-black bg-[#E3C10C] text-[#012579]">
   <div className="flex flex-col px-2 pb-4 text-xl">
   <h2 className="font-medium py-2">2. Lahkumisavaldus palgatööl</h2>
-  <a className="text-sm lg:text-lg w-fit" href="https://lahkumisavaldus.ee/" >https://lahkumisavaldus.ee/</a>
+  <a className="text-sm lg:text-lg" href="https://lahkumisavaldus.ee/" >https://lahkumisavaldus.ee/</a>
   </div>
 </div>
 
 <div className="flex h-fit border-2 rounded-xl border-black bg-[#E3C10C] text-[#012579]">
   <div className="flex flex-col px-2 pb-4 text-xl">
   <h2 className="font-medium py-2">3. RTJ</h2>
-<a className="text-sm lg:text-lg w-fit" href="https://www.fin.ee/finantspoliitika-valissuhted/arvestusvaldkond/raamatupidamise-toimkond" >https://www.fin.ee/finantspoliitika-valissuhted/arvestusvaldkond/raamatupidamise-toimkond</a>
+<a className="text-sm lg:text-lg" href="https://www.fin.ee/finantspoliitika-valissuhted/arvestusvaldkond/raamatupidamise-toimkond" >https://www.fin.ee/finantspoliitika-valissuhted/arvestusvaldkond/raamatupidamise-toimkond</a>
   </div>
 </div>
 </div>
