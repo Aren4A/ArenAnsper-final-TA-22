@@ -123,7 +123,7 @@ const sendEmail = (e) => {
         </div>
               
               <ul>
-            {services.map(({ name}, index) => {
+            {services.map(({ name }, index) => {
           return (
             <li key={index}>
               <div className="flex gap-4 py-2 lg:text-2xl text-xl text-blue-900 lg:w-[700px]">
@@ -135,7 +135,11 @@ const sendEmail = (e) => {
                     className="bg-base-100 checkbox checkbox-warning"
                     checked={checkedState[index]}
                     onChange={() => handleOnChange(index)}
-                    disabled={hourlyAccounting}
+                    disabled={hourlyAccounting 
+                      || (index === 0 && checkedState[1]) || (index === 1 && checkedState[0])
+                      || (index === 2 && checkedState[3]) || (index === 3 && checkedState[2])
+                      || (index === 4 && checkedState[5]) || (index === 5 && checkedState[4])
+                    }
                   />
                   <label htmlFor={`custom-checkbox-${index}`}>{t(name, { appName: "App" })}</label>
                 </div>
