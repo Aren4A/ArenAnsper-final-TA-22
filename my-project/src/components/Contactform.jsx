@@ -42,9 +42,8 @@ const handleOnChange = (position) => {
     const updatedCheckedState = checkedState.map((item, index) =>
       index === position ? !item : item
     );
-      setCheckedState(updatedCheckedState);
-    
-const totalPrice = updatedCheckedState.reduce(
+      setCheckedState(updatedCheckedState);   
+    const totalPrice = updatedCheckedState.reduce(
       (sum, currentState, index) => {
         if (currentState === true) {
           return sum + services[index].price;
@@ -55,27 +54,17 @@ const totalPrice = updatedCheckedState.reduce(
     );
     setTotal(totalPrice);
   };
-//Tunnipõhise ja teenuste märkeruutude hindade loogika
+//Tunnipõhise hinna loogika
 const handleCheck = (isChecked, service) => {
         if (service.label === 'soovin tunnipõhist raamatupidamist') {
             setHourlyAccounting(isChecked);
             if (isChecked) {
                 // Määra tunnipõhise hind
-                setSelectedServices({ 'soovin tunnipõhist raamatupidamist': 50 });
                 setTotal(50);
             } else {
-                // Eemalda tunnipõhise hind
-                setSelectedServices({});
+                // Määra summa 0
                 setTotal(0);
             }
-        } else {
-        let newTotal = total;
-        setSelectedServices(prevServices => ({
-          ...prevServices,
-          [service.label]: isChecked ? service.price : 0
-        }));
-
-
         }
     };
 //Kontaktvorm
