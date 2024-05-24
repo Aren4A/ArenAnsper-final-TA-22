@@ -1,11 +1,4 @@
 import React from 'react';
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-  Routes,
-  Link
-} from "react-router-dom";
 import Extra from './components/Extra';
 import ErrorPage from './components/ErrorPage';
 import Success from './components/Success';
@@ -15,8 +8,14 @@ import About from './components/About';
 import Contactform from './components/Contactform';
 import Footer from './components/Footer';
 import { useState } from "react";
-
 import { Analytics } from '@vercel/analytics/react';
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Routes,
+  Link
+} from "react-router-dom";
 
 const Dashboard = () =>{
   return<div>
@@ -26,14 +25,13 @@ const Dashboard = () =>{
         <Footer />
   </div>
 }
-
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Dashboard />
   },
   {
-    path: "/extra",
+    path: "/extra",    
     element: <Extra />
   },
   {
@@ -49,7 +47,6 @@ const router = createBrowserRouter([
     element: <ErrorPage />
   },
 ])
-
 function App() {
   return (
     <div className="App">
@@ -58,5 +55,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
