@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 
 
 function Contactform() {
+const [isDisabled, setIsDisabled] = useState(false);
 //react-i18next
 const { t, i18n: {changeLanguage, language} } = useTranslation();
 const [currentLanguage, setCurrentLanguage] = useState(language)
@@ -69,6 +70,7 @@ const handleCheck = (isChecked, service) => {
 const form = useRef();
 const sendEmail = (e) => {
     e.preventDefault();
+    setIsDisabled(true);
     const apiService = import.meta.env.VITE_SERVICE_ID;
     const apiTemplate = import.meta.env.VITE_TEMPLATE_ID;
     const apiPublic = import.meta.env.VITE_PUBLIC_KEY;
@@ -232,7 +234,7 @@ const sendEmail = (e) => {
                 </div>
                 </div>
                 <div className="flex flex-col items-center pb-5">
-                  <button className="text-xl lg:text-2xl btn btn-warning bg-[#E3C10C] w-[300px] lg:w-[350px]">{t('Submit', { appName: "App" })}</button>
+                  <button disabled={isDisabled} className="text-xl lg:text-2xl btn btn-warning bg-[#E3C10C] w-[300px] lg:w-[350px]">{t('Submit', { appName: "App" })}</button>
                 </div>
               </div>
             </div>
