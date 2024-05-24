@@ -18,8 +18,6 @@ const handleChangeLanguage = () => {
  {currentLanguage}
 //Kokku algseis
 const [total, setTotal] = useState(0);
-//Valitud teenused
-const [selectedServices, setSelectedServices] = useState({});
 //Tunnipõhine raamatupidamine
 const [hourlyAccounting, setHourlyAccounting] = useState(false);
 //Info väärtused infoboxes.js-st
@@ -95,9 +93,6 @@ const sendEmail = (e) => {
         <section>
           <form ref={form} onSubmit={sendEmail}>
             <input type="hidden" name="total" value={total} />
-            {Object.entries(services).map(([name, price], index) => (
-                <input type="hidden" name={`service-${index}`} />
-            ))}
             <div className="flex flex-col items-start lg:px-20 px-4 pt-20 pb-1.5 text-[#E6E5E0]">
             <div id="hind" className="text-lg lg:text-2xl text-blue-900 max-md:max-w-full font-bold">
             {t('AccountingTitle', { appName: "App" })}
@@ -112,8 +107,8 @@ const sendEmail = (e) => {
                         name="hourly-accounting" 
                         type="checkbox" 
                         className="bg-base-100 checkbox checkbox-warning mt-1.5"
-                        onChange={(e) => handleCheck(e.target.checked, { label: 'soovin tunnipõhist raamatupidamist', price: 50 })}
-                        disabled={checkedState.some(checked => checked)}                    />
+                        onChange={(e) => handleCheck(e.target.checked, { label: 'soovin tunnipõhist raamatupidamist'})}
+                        disabled={checkedState.some(checked => checked)}/>
                     <label for="hourly-accounting-checkbox">{t('HourlyAccounting', { appName: "App" })}</label>
                   </div>
                 </div>
